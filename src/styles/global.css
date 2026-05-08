@@ -389,12 +389,12 @@ nav.site-nav {
 
 /* PRICING */
 .pricing-card {
-  max-width: 520px;
+  max-width: 680px;
   margin: 0 auto;
   background: #0D1F35;
   border: 2px solid var(--gold);
   border-radius: 16px;
-  padding: 44px 40px;
+  padding: 44px 48px;
   position: relative;
   overflow: hidden;
 }
@@ -442,9 +442,10 @@ nav.site-nav {
 .price-feats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px 32px;
+  gap: 14px 40px;
   margin-bottom: 36px;
 }
+.feat-text { white-space: nowrap; }
 .feat {
   display: flex;
   gap: 10px;
