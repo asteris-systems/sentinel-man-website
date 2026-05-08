@@ -1,6 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FinalCTA from '../components/FinalCTA.astro';
+import SchemaJsonLd from '../components/SchemaJsonLd.astro';
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://sentinelman.com/about#nick-lord',
+  name: 'Nick Lord',
+  jobTitle: 'Founder',
+  worksFor: { '@id': 'https://sentinelman.com/#organization' },
+  description: 'Founder of SENTINEL MAN and SOVEREIGN OS — a decision governance methodology and operational system. Built SENTINEL MAN as the consumer expression of the operational intelligence system he had been using to govern his own decisions for years.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Sydney',
+    addressCountry: 'AU',
+  },
+};
 ---
 <BaseLayout
   title="About — SENTINEL MAN"
@@ -10,6 +26,7 @@ import FinalCTA from '../components/FinalCTA.astro';
   twitterTitle="About SENTINEL MAN — Built by a Man Who Needed It"
   twitterDescription="Nick Lord quit therapy, built a decision governance system for himself, then realised it was wrong to keep it private. The origin story of SENTINEL MAN."
 >
+  <SchemaJsonLd schema={personSchema} />
   <div class="content-wrap">
     <div class="content-hero">
       <div class="eyebrow">THE ORIGIN</div>

@@ -13,7 +13,10 @@ const isActive = (l: { href: string }) => {
 ---
 <nav class="site-nav">
   <a href="/" aria-label="Sentinel Man home">
-    <img src="/logo.png" alt="Sentinel Man" class="nav-logo" />
+    <picture>
+      <source srcset="/logo-200.webp" type="image/webp" />
+      <img src="/logo-200.png" alt="Sentinel Man" class="nav-logo" width="72" height="72" />
+    </picture>
   </a>
   <a href="/" class="nav-wordmark">SENTINEL MAN</a>
   <div class="nav-links">
@@ -25,6 +28,6 @@ const isActive = (l: { href: string }) => {
     ))}
     <span class="nav-sep">◆</span>
     <a href="/signin" class="nav-link">Sign in</a>
-    <a href="/#pricing" class="nav-cta">BEGIN ASSESSMENT</a>
+    <a href="/#pricing" class="nav-cta" data-track="cta_click" data-track-location="nav" data-track-label="Begin assessment">BEGIN ASSESSMENT</a>
   </div>
 </nav>

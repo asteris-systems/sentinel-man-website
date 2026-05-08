@@ -19,6 +19,6 @@ const {
     {eyebrow && <div class="eyebrow">{eyebrow}</div>}
     <h2>{heading}<br /><strong>{headingStrong}</strong></h2>
     <p>{sub}</p>
-    <a href="/#pricing" class="cta-btn">{cta}</a>
+    <a href="/#pricing" class="cta-btn" data-track="cta_click" data-track-location="final_cta" data-track-label={cta}>{cta}</a>
   </div>
 </section>

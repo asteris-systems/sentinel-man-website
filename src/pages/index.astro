@@ -6,6 +6,81 @@ import Arc from '../components/Arc.astro';
 import Proof from '../components/Proof.astro';
 import Pricing from '../components/Pricing.astro';
 import FinalCTA from '../components/FinalCTA.astro';
+import SchemaJsonLd from '../components/SchemaJsonLd.astro';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://sentinelman.com/#organization',
+    name: 'SENTINEL MAN',
+    url: 'https://sentinelman.com',
+    logo: 'https://sentinelman.com/logo.png',
+    description: 'Performance intelligence system for high-stakes men. Daily command brief, four-lane decision analysis, 90-day operational record.',
+    foundingDate: '2026',
+    founder: {
+      '@type': 'Person',
+      name: 'Nick Lord',
+      jobTitle: 'Founder',
+    },
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'My Cosmic Message Pty Ltd',
+      taxID: 'ABN 30 652 358 159',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Sydney',
+      addressRegion: 'NSW',
+      addressCountry: 'AU',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'support@sentinelman.com',
+      contactType: 'Customer Support',
+      availableLanguage: ['English'],
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': 'https://sentinelman.com/#product',
+    name: 'SENTINEL MAN',
+    description: 'AI performance intelligence system. Daily command brief, four-lane decision analysis, pattern detection engine, weekly debrief, and 90-day transformation arc.',
+    brand: { '@type': 'Brand', name: 'SENTINEL MAN' },
+    image: 'https://sentinelman.com/og-image.png',
+    url: 'https://sentinelman.com/',
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Monthly subscription (web)',
+        price: '19.99',
+        priceCurrency: 'AUD',
+        url: 'https://sentinelman.com/#pricing',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: '2027-12-31',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Annual subscription (web)',
+        price: '199.00',
+        priceCurrency: 'AUD',
+        url: 'https://sentinelman.com/#pricing',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: '2027-12-31',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://sentinelman.com/#website',
+    url: 'https://sentinelman.com',
+    name: 'SENTINEL MAN',
+    publisher: { '@id': 'https://sentinelman.com/#organization' },
+    inLanguage: 'en-AU',
+  },
+];
 ---
 <BaseLayout
   title="SENTINEL MAN — Performance Intelligence for Men"
@@ -13,6 +88,7 @@ import FinalCTA from '../components/FinalCTA.astro';
   ogDescription="Not a wellness app. A performance intelligence system. Daily brief, 4-lane decision analysis, pattern detection, 90-day transformation arc. Start your 7-day free trial."
   twitterDescription="Not a wellness app. A performance intelligence system. Daily brief, 4-lane decision analysis, 90-day arc. 7-day free trial — no credit card."
 >
+  <SchemaJsonLd schema={schema} />
   <Hero />
   <Engines />
   <Arc />

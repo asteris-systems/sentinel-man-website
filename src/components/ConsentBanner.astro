@@ -1,0 +1,116 @@
+---
+// Cookie consent banner — runs entirely client-side.
+// Uses Google Consent Mode v2: GA4 loads but is denied analytics_storage
+// until the user accepts. On accept, gtag('consent', 'update', ...) grants it.
+---
+<div id="consent-banner" class="consent-banner" hidden>
+  <div class="consent-inner">
+    <div class="consent-text">
+      <strong>One quick thing.</strong> We use Google Analytics to understand visitor volume — no advertising, no profiles, no third-party tracking. <a href="/privacy" class="consent-link">Privacy policy</a>.
+    </div>
+    <div class="consent-actions">
+      <button type="button" id="consent-decline" class="consent-btn consent-decline">Decline</button>
+      <button type="button" id="consent-accept" class="consent-btn consent-accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    const KEY = 'sentinel-consent-v1';
+    const banner = document.getElementById('consent-banner');
+
+    const stored = localStorage.getItem(KEY);
+    if (stored === 'granted') {
+      // Returning user who accepted — grant analytics
+      window.gtag && window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else if (stored === 'denied') {
+      // Returning user who declined — leave default (denied), no banner
+    } else {
+      // First visit — show banner
+      banner.hidden = false;
+    }
+
+    document.getElementById('consent-accept').addEventListener('click', () => {
+      localStorage.setItem(KEY, 'granted');
+      window.gtag && window.gtag('consent', 'update', { analytics_storage: 'granted' });
+      banner.hidden = true;
+    });
+
+    document.getElementById('consent-decline').addEventListener('click', () => {
+      localStorage.setItem(KEY, 'denied');
+      banner.hidden = true;
+    });
+  })();
+</script>
+
+<style>
+  .consent-banner {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 1000;
+    background: #0D1F35;
+    border: 1px solid rgba(255,220,0,0.4);
+    border-radius: 10px;
+    padding: 18px 22px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    max-width: 720px;
+    margin: 0 auto;
+    animation: consent-rise 0.4s ease-out;
+  }
+  @keyframes consent-rise {
+    from { transform: translateY(120%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .consent-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .consent-text {
+    flex: 1;
+    font-family: 'Rubik', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--secondary);
+  }
+  .consent-text strong { color: var(--text); font-weight: 500; }
+  .consent-link {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,220,0,0.3);
+  }
+  .consent-link:hover { border-bottom-color: var(--gold); }
+  .consent-actions { display: flex; gap: 10px; flex-shrink: 0; }
+  .consent-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    padding: 9px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: 1px solid transparent;
+  }
+  .consent-decline {
+    background: transparent;
+    color: var(--body);
+    border-color: var(--border);
+  }
+  .consent-decline:hover { color: var(--text); border-color: var(--secondary); }
+  .consent-accept {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+    font-weight: 500;
+  }
+  .consent-accept:hover { background: #FFE433; }
+
+  @media (max-width: 700px) {
+    .consent-banner { left: 12px; right: 12px; padding: 16px 18px; }
+    .consent-inner { flex-direction: column; align-items: stretch; gap: 14px; }
+    .consent-actions { justify-content: flex-end; }
+  }
+</style>

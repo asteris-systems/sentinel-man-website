@@ -1,11 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FinalCTA from '../components/FinalCTA.astro';
+import SchemaJsonLd from '../components/SchemaJsonLd.astro';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Why I Built SENTINEL MAN',
+  alternativeHeadline: 'The origin story of SENTINEL MAN, by Nick Lord',
+  author: {
+    '@type': 'Person',
+    name: 'Nick Lord',
+    jobTitle: 'Founder, SENTINEL MAN',
+  },
+  publisher: { '@id': 'https://sentinelman.com/#organization' },
+  datePublished: '2026-05-08',
+  dateModified: '2026-05-08',
+  image: 'https://sentinelman.com/og-image.png',
+  mainEntityOfPage: 'https://sentinelman.com/origin',
+  description: 'The founding story of SENTINEL MAN. Why a man who quit therapy and built his own intelligence system finally turned it into a product.',
+  inLanguage: 'en-AU',
+  wordCount: 2200,
+};
 ---
 <BaseLayout
   title="Origin — Why I Built SENTINEL MAN"
   description="The founding story of Sentinel Man. By Nick Lord. Why a man who quit therapy and built his own intelligence system finally turned it into a product."
 >
+  <SchemaJsonLd schema={articleSchema} />
   <article class="essay">
     <header class="essay-head">
       <div class="essay-eyebrow">ORIGIN · ESSAY</div>

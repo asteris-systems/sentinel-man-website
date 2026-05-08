@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+---
+<BaseLayout
+  title="Who SENTINEL MAN Is Built For"
+  description="A short, sharp self-qualifier. SENTINEL MAN is built for a specific kind of man. If you are not that man, this is not the product for you. Find out in 30 seconds."
+  ogTitle="Who SENTINEL MAN Is Built For"
+  ogDescription="A 30-second self-qualifier. SENTINEL MAN is built for a specific kind of man. If you are not that man, you save the money and we save the support tickets."
+  twitterTitle="Who SENTINEL MAN Is Built For"
+  twitterDescription="A 30-second self-qualifier. If you are this man, the product will work. If not, this saves us both time."
+>
+  <div class="content-wrap">
+    <div class="content-hero">
+      <div class="eyebrow">QUALIFIER</div>
+      <h1>This is built for<br /><strong>a specific kind of man.</strong></h1>
+      <p class="lead">If you are not that man, SENTINEL MAN is not for you. That is not a marketing line. The product is calibrated, the language is calibrated, and the whole thing only works if you self-recognise inside the next thirty seconds.</p>
+    </div>
+
+    <section class="content-section">
+      <div class="qual-grid">
+        <div class="qual-col">
+          <div class="qual-head">
+            <span class="qual-icon">✦</span>
+            <span class="qual-label">YOU SHOULD USE THIS IF</span>
+          </div>
+          <ul class="qual-list">
+            <li>You make decisions every day that have real downstream consequences — money, people, direction. Not theoretical.</li>
+            <li>You have noticed that the quality of your decisions varies, and you cannot reliably predict the days when you will be sharp versus the days you will not be.</li>
+            <li>You have tried to journal, meditate, or use mood-tracking apps and abandoned them inside two weeks. You did not abandon them because you lack discipline. You abandoned them because they were not built for the way you operate.</li>
+            <li>You are 30 to 60. You are running a business, leading a team, partnered up at a firm, or operating with that level of weight on the schedule.</li>
+            <li>You will read a daily 200-word brief if it is genuinely about you and your data. You will not read another daily horoscope written by a system that knows nothing.</li>
+            <li>You think of yourself as an operator, not a patient.</li>
+            <li>You are willing to spend 90 seconds a day for 90 days to build something that pays back across the next ten years.</li>
+          </ul>
+        </div>
+
+        <div class="qual-col qual-col-no">
+          <div class="qual-head">
+            <span class="qual-icon">✗</span>
+            <span class="qual-label">DO NOT USE THIS IF</span>
+          </div>
+          <ul class="qual-list">
+            <li>You are looking for emotional support, talk therapy, or someone to listen. SENTINEL MAN does not do that. There are excellent products that do — find one of them.</li>
+            <li>You are in acute crisis. Call <strong>Lifeline 13 11 14</strong> or <strong>000</strong> immediately. SENTINEL MAN is not built for that situation and will not pretend to be.</li>
+            <li>You want a product that agrees with everything you say. The Decision Engine is deliberately adversarial. If your reasoning is weak, it will tell you.</li>
+            <li>You are unwilling to enter operational data daily. The system is built on your data. Without it, the intelligence does not exist.</li>
+            <li>You expect overnight transformation. The 90-day arc is 90 days because that is the actual minimum useful timeframe.</li>
+            <li>You are not a man, or you are a man under 18. The product is calibrated for adult men in operational roles. The methodology, the language, the framing — none of it generalises.</li>
+            <li>You want to be told what to do. SENTINEL MAN gives you intelligence, not instructions. The decision authority stays with you.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">THE TEST</div>
+      <h2>Three questions. <strong>Answer honestly.</strong></h2>
+      <p class="section-sub" style="text-align:left;margin:8px 0 32px">If you answer yes to all three, this is for you. If you answer no to any of them, save the money and use something else. We are not for everyone — that is by design.</p>
+
+      <div class="qtest">
+        <div class="qtest-row">
+          <div class="qtest-num">01</div>
+          <div class="qtest-q">Do your decisions actually matter — to people, to money, to outcomes you cannot easily reverse?</div>
+        </div>
+        <div class="qtest-row">
+          <div class="qtest-num">02</div>
+          <div class="qtest-q">Do you suspect your performance varies in ways you cannot consistently track or predict?</div>
+        </div>
+        <div class="qtest-row">
+          <div class="qtest-num">03</div>
+          <div class="qtest-q">Will you actually use a daily intelligence system if it is calibrated to you, in language you respect?</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">THE FRAME</div>
+      <h2>What this is, in one line.</h2>
+      <div class="frame-card">
+        <div class="frame-line">SENTINEL MAN is the operational intelligence system you would have built for yourself —</div>
+        <div class="frame-line frame-line-emph">if you had a decade and a research team to do it.</div>
+      </div>
+      <p class="section-sub" style="margin-top:32px">Read the <a href="/origin" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,220,0,0.3)">full origin essay</a> if you want to understand why it exists. Read <a href="/how-it-works" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,220,0,0.3)">how it works</a> if you want to understand what it does. Or skip both and start the trial — the product itself will answer faster than the marketing copy.</p>
+    </section>
+  </div>
+
+  <FinalCTA
+    heading="If this is you,"
+    headingStrong="the door is open."
+    sub="Seven days. No credit card. Decide for yourself by Day 7."
+    cta="Begin your 7-day trial →"
+  />
+</BaseLayout>
+
+<style>
+  .qual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  .qual-col {
+    background: rgba(13, 31, 53, 0.5);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 28px 30px;
+  }
+  .qual-col-no { border-left-color: #FF5C5C; }
+  .qual-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .qual-icon {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .qual-col-no .qual-icon { color: #FF5C5C; }
+  .qual-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+  }
+  .qual-col-no .qual-label { color: #FF5C5C; }
+  .qual-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .qual-list li {
+    padding: 14px 0;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--secondary);
+    border-bottom: 1px solid var(--border);
+  }
+  .qual-list li:last-child { border-bottom: none; }
+  .qual-list li strong { color: var(--text); font-weight: 500; }
+
+  .qtest { display: flex; flex-direction: column; gap: 14px; }
+  .qtest-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    align-items: center;
+    background: rgba(13, 31, 53, 0.4);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 28px;
+  }
+  .qtest-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .qtest-q {
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .frame-card {
+    background: rgba(13, 31, 53, 0.5);
+    border: 1px solid rgba(255,220,0,0.4);
+    border-radius: 12px;
+    padding: 40px 44px;
+    text-align: center;
+  }
+  .frame-line {
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(18px, 2.4vw, 24px);
+    line-height: 1.45;
+    font-weight: 300;
+    color: var(--secondary);
+  }
+  .frame-line-emph { color: var(--gold); font-weight: 500; margin-top: 8px; }
+
+  @media (max-width: 800px) {
+    .qual-grid { grid-template-columns: 1fr; }
+    .qtest-row { grid-template-columns: 60px 1fr; gap: 16px; padding: 18px 20px; }
+    .qtest-num { font-size: 22px; }
+    .qtest-q { font-size: 15px; }
+    .frame-card { padding: 32px 24px; }
+  }
+</style>

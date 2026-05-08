@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ConsentBanner from '../components/ConsentBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -81,19 +82,54 @@ const socialImageURL = new URL(image, Astro.site).toString();
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W49JKBRT5C"></script>
+  <!-- Google Analytics 4 (Consent Mode v2 — denied until user opts in) -->
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    // Set defaults BEFORE the GA script loads
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    // If user has previously granted, upgrade immediately
+    try {
+      if (localStorage.getItem('sentinel-consent-v1') === 'granted') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    } catch (e) {}
     gtag('js', new Date());
-    gtag('config', 'G-W49JKBRT5C');
+    gtag('config', 'G-W49JKBRT5C', { anonymize_ip: true });
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W49JKBRT5C"></script>
 </head>
 <body>
   <div class="top-line"></div>
   <Nav />
   <slot />
   <Footer />
+  <ConsentBanner />
+
+  <!-- Click-event tracking (delegated). Fires gtag for any [data-track] element. -->
+  <script is:inline>
+    (function () {
+      document.addEventListener('click', function (e) {
+        const el = e.target.closest('[data-track]');
+        if (!el || !window.gtag) return;
+        const event = el.getAttribute('data-track');
+        const location = el.getAttribute('data-track-location') || document.title;
+        const label = el.getAttribute('data-track-label') || (el.textContent || '').trim().slice(0, 80);
+        window.gtag('event', event, {
+          event_category: 'engagement',
+          event_label: label,
+          page_location: window.location.pathname,
+          cta_location: location
+        });
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
