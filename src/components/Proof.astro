@@ -1,23 +1,28 @@
 ---
 const quotes = [
   {
-    quote: 'I stopped guessing when to make decisions. The data tells me when my window is open and when it is not.',
-    attr: 'FOUNDER · TECH · SYDNEY',
+    quote: 'The Decision Advisor caught something I had already internally committed to — and told me I was seeking permission, not making a decision. That sentence alone was worth the entire product.',
+    attr: 'FOUNDER · PROFESSIONAL SERVICES — SYDNEY',
     color: '#FFDC00',
   },
   {
-    quote: 'The Provocateur asked me a question at Day 21 that I had been avoiding for three years. One question. That was enough.',
-    attr: 'DIRECTOR · FINANCE · MELBOURNE',
+    quote: 'I have never opened a wellness app in my life. This does not feel like one. It feels like a system. That is the difference.',
+    attr: 'SENIOR DIRECTOR · FINANCIAL SERVICES — MELBOURNE',
     color: '#0074D9',
   },
   {
-    quote: 'This is not a wellness app. That is why it works. It treats me like an operator, not a patient. The difference is everything.',
-    attr: 'PARTNER · LAW · BRISBANE',
+    quote: 'Day 30. The pattern it surfaced had been running for six months. I had not seen it. The system had. That is what I am paying for.',
+    attr: 'MANAGING PARTNER · LEGAL — BRISBANE',
     color: '#34D399',
   },
 ];
 ---
-<section class="section" style="padding-top:56px;padding-bottom:56px">
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">FIELD RESULTS</div>
+    <h2>What Sentinel Men <strong>report.</strong></h2>
+    <p class="section-sub">Beta participants. Not marketing copy. Their words, not ours.</p>
+  </div>
   <div class="proof">
     {quotes.map((q) => (
       <div class="proof-card" style={`--accent:${q.color}`}>

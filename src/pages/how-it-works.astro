@@ -1,11 +1,173 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import FinalCTA from '../components/FinalCTA.astro';
 ---
-<BaseLayout title="How It Works — SENTINEL MAN">
-  <section class="section">
-    <div class="section-head">
-      <div class="eyebrow">HOW IT WORKS</div>
-      <h2>Coming online.<br /><strong>Hold position.</strong></h2>
+<BaseLayout title="How It Works — SENTINEL MAN" description="Four engines. One coordinated intelligence system. Brief, Decision, Pattern, Debrief.">
+  <div class="content-wrap">
+    <div class="content-hero">
+      <div class="eyebrow">THE ARCHITECTURE</div>
+      <h1>Four engines.<br /><strong>One intelligence system.</strong></h1>
+      <p class="lead">SENTINEL MAN is not a single AI responding to prompts. It is a coordinated system — four specialised engines working from your data to produce intelligence that improves the longer you use it.</p>
     </div>
-  </section>
+
+    <section class="content-section">
+      <div class="mini-engines">
+        <div class="mini-engine"><div class="num">01</div><div class="name">Brief Engine</div></div>
+        <div class="mini-engine"><div class="num">02</div><div class="name">Decision Engine</div></div>
+        <div class="mini-engine"><div class="num">03</div><div class="name">Pattern Engine</div></div>
+        <div class="mini-engine"><div class="num">04</div><div class="name">Debrief Engine</div></div>
+      </div>
+      <div class="split-text" style="max-width:820px;margin:0 auto">
+        <p>Each engine has a distinct job. Each draws from the same data store — your check-ins, your decisions, your Operating Principles — and produces a different form of intelligence. None of them work in isolation. Together they build a model of how you operate that no single AI session can produce.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">ENGINE 01 — DAILY</div>
+      <h2>The <strong>Brief Engine.</strong></h2>
+      <div class="split">
+        <div class="split-text">
+          <p>Every morning, before you open your inbox, SENTINEL MAN produces your operational brief. Not a generic motivational message. A data-driven intelligence report, specific to your state on that specific day.</p>
+          <p>The brief begins with your mode assignment — <strong>COMMAND</strong>, <strong>RECON</strong>, or <strong>STANDBY</strong> — determined by the system from your check-in data and recent trend. Your mode sets the tone for everything that follows. A COMMAND mode brief is aggressive and directive. A RECON brief is observational, diagnostic. STANDBY is minimal — the system knows today is not the day to push hard.</p>
+          <p>Below the mode: your Readiness Score (0–100), your decision quality window (the hours your data says your judgment is sharpest), and three operational levers — specific, actionable moves for that day. No generic advice. Each lever is derived from the pattern the system has built about you.</p>
+        </div>
+        <div class="phone-frame" style="margin:0 auto;width:280px">
+          <div class="phone-notch"><div class="notch-bar"></div></div>
+          <div class="phone-screen">
+            <div class="p-datestamp">THU 08 MAY — 06:34 AEST</div>
+            <div class="p-mode">▶ COMMAND MODE</div>
+            <div class="p-readiness">84</div>
+            <div class="p-score-label">READINESS SCORE — PERSONAL BASELINE</div>
+            <div class="p-rule"></div>
+            <div class="p-brief">Sleep debt: 8 minutes. HRV elevated. Cognitive load: optimal. Your peak decision window opens at 06:34 and closes at approximately 12:00. Three levers identified.</div>
+            <div class="p-rule"></div>
+            <div class="p-lever"><span class="p-lm">▸</span><span class="p-lt">Front-load decisions before 11am</span><span class="p-tag">↑ DECISION</span></div>
+            <div class="p-lever"><span class="p-lm">▸</span><span class="p-lt">Physical output before first business action</span><span class="p-tag">↑ CLARITY</span></div>
+            <div class="p-lever"><span class="p-lm">▸</span><span class="p-lt">Contact M. — 21 days elapsed</span><span class="p-tag">◈ NETWORK</span></div>
+          </div>
+          <div class="phone-home"><div class="home-bar"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">WHAT FEEDS THE BRIEF ENGINE</div>
+      <h2>The <strong>daily check-in.</strong></h2>
+      <div class="split">
+        <div class="mock-card">
+          <div class="mock-label">DAILY CHECK-IN — UNDER 90 SECONDS</div>
+          <div class="mock-row"><div class="mock-lane">MOOD VECTOR</div><div class="mock-body">Fog · Edged · Flat · <strong style="color:var(--gold)">[Solid]</strong> · Apex</div></div>
+          <div class="mock-row"><div class="mock-lane">SLEEP HOURS</div><div class="mock-body">7h <span style="opacity:0.4">▮▮▮▮▮▮▮▯▯▯</span></div></div>
+          <div class="mock-row"><div class="mock-lane">PHYSICAL LOAD</div><div class="mock-body"><strong style="color:var(--gold)">[Rested]</strong> · Loaded · Crushed</div></div>
+          <div class="mock-row"><div class="mock-lane">MENTAL CLARITY</div><div class="mock-body">4 / 5 <span style="opacity:0.4">▮▮▮▮▯</span></div></div>
+          <div class="mock-row"><div class="mock-lane">NETWORK PULSE</div><div class="mock-body">Degraded · <strong style="color:var(--gold)">[Stable]</strong> · Optimal</div></div>
+          <div class="mock-row"><div class="mock-lane">CARRY-FORWARD (OPTIONAL)</div><div class="mock-body">Board deck review before 1600 →</div></div>
+        </div>
+        <div class="split-text">
+          <p>Five inputs. Under 90 seconds. No typing unless you choose to. The check-in is deliberately minimal — because a tool you do not use daily produces no intelligence at all.</p>
+          <p>The five inputs — mood vector, sleep hours, physical load, mental clarity, and network pulse — feed directly into your Readiness Score calculation. A sixth optional field, <strong>carry-forward</strong>, lets you log an open item in under ten words. That item appears in tomorrow's brief until you clear it.</p>
+          <p>From Day 7 onward, your scores are calculated against your personal baseline — not population averages. A Readiness Score of 71 means something different for you than for the man next to you. The system learns the difference.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">ENGINE 02 — ON DEMAND</div>
+      <h2>The <strong>Decision Engine.</strong></h2>
+      <div class="split">
+        <div class="split-text">
+          <p>When you face a significant decision, you submit it to the Decision Engine. Four AI models analyse it in parallel — each with a different mandate. Within 26 seconds, a synthesised assessment arrives. One voice. Four perspectives already resolved.</p>
+          <p><strong>The Reasoner</strong> — checks the decision against your history and your Operating Principles. Has this pattern appeared before? What did your data look like on days you made similar choices?</p>
+          <p><strong>The Contrarian</strong> — attacks the obvious choice. What are the specific kill shots? What is the worst-case outcome? What are you not seeing because you are inside the decision?</p>
+          <p><strong>The Context Enhancer</strong> — finds the variables you are not considering. Second and third-order consequences. Relational ripples. What happens to the people adjacent to this decision?</p>
+          <p><strong>The Predictor</strong> — estimates what you will actually do. Based on your behaviour patterns, are you genuinely evaluating this — or have you already decided and are seeking validation?</p>
+        </div>
+        <div class="mock-card">
+          <div class="mock-label">DECISION ASSESSMENT — 26 SECONDS</div>
+          <div class="mock-row gold"><div class="mock-lane">REASONER</div><div class="mock-body">Identical structure to April hiring decision. OP 1 conflict detected. Third path available — 14-day compressed trial.</div></div>
+          <div class="mock-row red"><div class="mock-lane">CONTRARIAN</div><div class="mock-body">$180K with no trial period. If this fails, the referring client absorbs reputational damage. You are being pressured by your own calendar.</div></div>
+          <div class="mock-row blue"><div class="mock-lane">CONTEXT</div><div class="mock-body">Your best client is the referral source. A failure here doesn't only affect the contract — it implicates that relationship.</div></div>
+          <div class="mock-row purple"><div class="mock-lane">PREDICTOR</div><div class="mock-body">You are seeking permission for an exception you have already committed to internally — not genuinely deciding.</div></div>
+          <div class="mock-synthesis"><div class="mock-lane">◈ SOVEREIGNTY CHECK</div><div class="mock-body">If this offer arrived with a 60-day start and standard trial structure — would you take it? That question isolates the opportunity from the pressure.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">ENGINE 03 — LONGITUDINAL</div>
+      <h2>The <strong>Pattern Engine.</strong></h2>
+      <div class="split">
+        <div class="mock-card">
+          <div class="mock-label">PATTERN LEDGER — ACTIVE SIGNALS</div>
+          <div class="mock-row gold"><div class="mock-lane">SLEEP-DECISION CORRELATION</div><div class="mock-body">Decision quality drops 31% when sleep debt exceeds 45 min. Pattern consistent across 14 data points.<br /><span style="color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em">CONFIDENCE: HIGH · 14 DATA POINTS</span></div></div>
+          <div class="mock-row blue"><div class="mock-lane">AFTERNOON REACTIVE DECISIONS</div><div class="mock-body">Decisions made after 3pm on high-load days are 40% more reactive than baseline.<br /><span style="color:var(--blue);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em">CONFIDENCE: MEDIUM · 8 DATA POINTS</span></div></div>
+          <div class="mock-row" style="border-left:2px solid var(--muted)"><div class="mock-lane" style="color:var(--muted)">NETWORK-CREATIVITY LINK</div><div class="mock-body">Strong social contact weeks correlate with higher clarity scores 2 days later.<br /><span style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em">CONFIDENCE: EMERGING · 5 DATA POINTS</span></div></div>
+        </div>
+        <div class="split-text">
+          <p>Most tools show you how you felt today. SENTINEL MAN builds a model of how you operate over time — detecting the correlations that repeat in your data before you are consciously aware of them.</p>
+          <p>The Pattern Engine runs two scans. A daily light scan checks for emerging signals — possible correlations in your most recent data. It never surfaces a pattern until the evidence threshold is met. A weekly deep scan runs a full analysis across your history, confirming patterns, updating confidence scores, and retiring patterns that no longer hold.</p>
+          <p>The patterns that matter most are the ones that reveal your <strong>decision conditions</strong> — the physiological and situational states that predict your best and worst calls. "Decision quality drops 31% when sleep debt exceeds 45 minutes and physical load is high." That is not a population statistic. That is your data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">ENGINE 04 — WEEKLY</div>
+      <h2>The <strong>Debrief Engine.</strong></h2>
+      <div class="split">
+        <div class="split-text">
+          <p>Every Sunday evening, the Debrief Engine synthesises your week. Not a mood summary. A performance review — the kind a serious athlete would review between training sessions.</p>
+          <p>The debrief covers what changed, what degraded, what improved, what your decision quality looked like, and which Operating Principle was tested during the week. It closes with your primary objective for the next cycle — a single actionable focus that carries forward automatically to Monday's brief.</p>
+          <p>By Week 12, your DEBRIEF tab is twelve weeks of operational history. Re-readable. The man who reads Week 3 at Week 12 and sees the same limiting variable is reading his own pattern — not a system report. That is what SENTINEL MAN is designed to produce.</p>
+        </div>
+        <div class="mock-card">
+          <div class="mock-label">WEEKLY DEBRIEF — WEEK 7</div>
+          <div class="mock-row"><div class="mock-lane">PERFORMANCE SUMMARY</div><div class="mock-body">
+            Decision quality: <strong style="color:var(--gold)">74%</strong> <span style="opacity:0.4">▮▮▮▮▮▮▮▯▯▯</span><br />
+            Readiness trend: <strong style="color:var(--green)">+6%</strong> vs Week 6 <span style="opacity:0.4">▮▮▮▮▮▮▯▯▯▯</span><br />
+            Network health: <strong style="color:var(--text)">Stable</strong>
+          </div></div>
+          <div class="mock-row gold"><div class="mock-lane">PRINCIPLE TESTED THIS WEEK</div><div class="mock-body">OP 2: No hire decision without 72-hour cooling period. Two opportunities arose. Protocol held on one. The second was borderline — flagged for review.</div></div>
+          <div class="mock-synthesis"><div class="mock-lane">◈ NEXT CYCLE OBJECTIVE</div><div class="mock-body">Reduce reactive decisions after 3pm — implement end-of-day decision cutoff protocol before Week 8.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">THE DISTINCTION</div>
+      <h2>Not what you have <strong>tried before.</strong></h2>
+      <p class="section-sub" style="text-align:left;margin:0 0 16px">Every tool claims to be different. Here is the specific difference.</p>
+      <div class="compare">
+        <div class="compare-col">
+          <div class="compare-head">OTHER PLATFORMS</div>
+          <ul>
+            <li>Generic population data applied to your situation</li>
+            <li>Mood tracking with no decision intelligence layer</li>
+            <li>Single AI giving one perspective on every decision</li>
+            <li>Employer-purchased — your manager knows you use it</li>
+            <li>Wellness language designed for a different audience</li>
+            <li>Insights that reset every session, no longitudinal model</li>
+          </ul>
+        </div>
+        <div class="compare-col win">
+          <div class="compare-head">SENTINEL MAN</div>
+          <ul>
+            <li>Your personal baseline builds from Day 1. Every score is yours.</li>
+            <li>Four AI lanes analyse every decision — including the contrarian kill shots</li>
+            <li>Pattern intelligence that accumulates across 90 days and beyond</li>
+            <li>Man-sovereign. You buy it. Nobody at HR knows. Your data.</li>
+            <li>Performance language — the system speaks the way you think</li>
+            <li>Operating Principles gate — every decision checked against your own values</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <FinalCTA
+    heading="See it working"
+    headingStrong="on your data."
+    sub="Eight days. No credit card. The system starts building from Day 1."
+    cta="Begin your 8-day trial →"
+  />
 </BaseLayout>

@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+
+const days = [
+  { day: 'Day 1', system: 'Onboarding — 7 questions establish your Operating Principles and baseline context. First check-in processed. Bootstrap baseline active.', experience: '"BOOTSTRAP MODE: Readiness 72 (Sentinel baseline). OP1 primed. One lever." The system has almost nothing on you. It tells you that honestly.', goal: 'HOOK' },
+  { day: 'Day 2', system: 'Second check-in processed. Sleep debt calculation begins. Mode assigned from first real data point.', experience: 'Your mode appears for the first time. COMMAND or RECON — one word before anything else. The brief is slightly more specific than yesterday.', goal: 'HABIT' },
+  { day: 'Day 3', system: 'Three data points in. First carry-forward tracked. Decision log unlocked — optional prompt appears.', experience: '"Momentum +2%. Your carry-forward from yesterday is still open." The system has started tracking continuity. It knows what you said you would do.', goal: 'FIRST VALUE' },
+  { day: 'Day 4', system: 'Pattern scan runs. If a correlation exists across 3 data points, it surfaces as an emerging signal — not a confirmed pattern.', experience: '"Pattern forming: physical load and clarity scores are moving together across 3 data points. Not confirmed. Watching." The man sees the system has noticed something specific about him.', goal: 'FIRST INSIGHT' },
+  { day: 'Day 5', system: 'RECON mode introduced for the first time if not already assigned.', experience: 'The brief looks different. A different format, a different tone. The system is not monotone. It adapts to what it is seeing in your data.', goal: 'FORMAT VARIATION' },
+  { day: 'Day 6', system: 'Skip detection active. If no check-in, STANDBY brief queues. No chase message. No guilt prompt.', experience: '"STANDBY: No input today. Just read. Recovery protocol active." The system respects that some days are not the days. It does not lecture you.', goal: 'LOW FRICTION' },
+  { day: 'Day 7', system: 'Personal baseline begins replacing cohort averages. Pattern scan runs on first complete week. Day 7 alert queues if qualifying pattern found.', experience: '"Week 1: +8% readiness trend. Your data is beginning to form a shape. Here is what it shows." The man reads his own first week back as data.', goal: 'RETENTION ANCHOR' },
+];
+---
+<BaseLayout title="The 90-Day Arc — SENTINEL MAN" description="Ninety days. Nine milestones. The deliberate transformation arc inside Sentinel Man.">
+  <div class="content-wrap">
+    <div class="content-hero">
+      <div class="eyebrow">THE TRANSFORMATION</div>
+      <h1>Ninety days.<br /><strong>Nine milestones.</strong></h1>
+      <p class="lead">SENTINEL MAN was designed around a deliberate transformation arc. Every milestone is delivered when your data earns it — not on a fixed calendar. Some men hit Day 7's first pattern in five days. Others take nine. The system waits for the evidence.</p>
+    </div>
+
+    <section class="content-section">
+      <div class="eyebrow">THE FOUNDATION</div>
+      <h2>The first <strong>seven days.</strong></h2>
+      <div class="split-text" style="margin-bottom:32px">
+        <p>The first seven days prove one thing: that a man who would never open a wellness app will open this. Every day is designed with a specific purpose. None of them are warm-up.</p>
+      </div>
+
+      <table class="day-table">
+        <thead>
+          <tr><th>Day</th><th>What the system does</th><th>What you experience</th><th>Goal</th></tr>
+        </thead>
+        <tbody>
+          {days.map((d) => (
+            <tr>
+              <td class="day-num">{d.day}</td>
+              <td>{d.system}</td>
+              <td>{d.experience}</td>
+              <td class="goal">{d.goal}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="content-section">
+      <div class="eyebrow">THE NINE MILESTONES</div>
+      <h2>When the system <strong>speaks directly.</strong></h2>
+      <div class="split-text" style="margin-bottom:24px">
+        <p>Nine moments in 90 days where SENTINEL MAN breaks from its daily cadence and delivers something different. Each is triggered by your data — not by the calendar.</p>
+      </div>
+
+      <div class="vtimeline">
+        <div class="vstage">
+          <div class="vstage-day">DAY 7</div>
+          <div class="vstage-tag">THE FIRST PATTERN</div>
+          <h3>The system names something you have not named.</h3>
+          <div class="vstage-body">
+            <p>If the pattern engine has found a qualifying correlation in your first seven days — at least three confirming data points, above the confidence threshold — it surfaces it as a formal pattern alert. Not a suggestion. A named operational pattern in your data.</p>
+            <p class="vstage-detail">This is the moment men describe as the product becoming real. Not because the pattern is surprising — often it is not. Because it is specific. "Your decision quality drops 28% on days following physical load above Loaded, when sleep was below your baseline." That is not generic advice. That is your data talking back to you.</p>
+          </div>
+          <div class="pullquote">"Day 4 it noticed something. By Day 7 it had a name for it. I had been managing around that pattern for two years without knowing that's what I was doing."</div>
+        </div>
+
+        <div class="vstage">
+          <div class="vstage-day">DAY 14</div>
+          <div class="vstage-tag">THE DECISION ADVISOR ACTIVATES</div>
+          <h3>The four-lane engine opens.</h3>
+          <div class="vstage-body">
+            <p>At Day 14, the Decision Advisor becomes available. The brief that morning includes an invitation — not a prompt, an invitation. The man decides when his first significant decision enters the system.</p>
+            <p class="vstage-detail">The Decision Advisor requires enough history to be useful. At Day 14, the Reasoner has two weeks of your check-in data and emerging patterns to reason from. Your Operating Principles are established. The Predictor has enough behavioural data to make an initial estimate. Four lanes. 26 seconds. One synthesised assessment.</p>
+          </div>
+        </div>
+
+        <div class="vstage">
+          <div class="vstage-day">DAY 21</div>
+          <div class="vstage-tag">THE PROVOCATION</div>
+          <h3>One direct challenge. Once.</h3>
+          <div class="vstage-body">
+            <p>Once per 90 days, in certain conditions, SENTINEL MAN delivers a Provocateur brief — a direct challenge triggered only when the system has detected a consistent gap between what you have said your principles are and what your behaviour data shows.</p>
+            <p class="vstage-detail">The conditions are strict: readiness above 60, mode not STANDBY, minimum 14-day cooldown, and at least three data points confirming the misalignment. The system has earned the right to say this.</p>
+          </div>
+          <div class="pullquote">"Your pattern shows consistent avoidance of high-stakes networking contacts on days following heavy workloads — 7 of 9 instances across the last 21 days. OP 3 states this is your highest-priority development area. What is the real reason for the avoidance?"</div>
+        </div>
+
+        <div class="vstage">
+          <div class="vstage-day">DAY 30</div>
+          <div class="vstage-tag">THE MIRROR</div>
+          <h3>Your operating profile. Thirty days of data.</h3>
+          <div class="vstage-body">
+            <p>Day 30 replaces the standard morning brief entirely. The man receives a structured assessment of his operating profile — built from everything the system has observed. Not a summary. A mirror.</p>
+            <p class="vstage-detail">The profile covers: peak decision windows established from his data (not population averages), the two or three patterns confirmed to high confidence, how his Operating Principles have been tested across 30 days, his readiness trend, and one direct question the system cannot answer for him.</p>
+          </div>
+          <div class="principles" style="margin-top:24px">
+            <div class="principle"><div class="principle-title">◈ Peak windows</div><div class="principle-body">The specific hours your data shows your decision quality is highest. Now personal, not population average.</div></div>
+            <div class="principle"><div class="principle-title">◈ Confirmed patterns</div><div class="principle-body">Two to three patterns the system has confirmed to high confidence. Named. Operational.</div></div>
+            <div class="principle"><div class="principle-title">◈ Principle performance</div><div class="principle-body">Which Operating Principles held, which bent, and which were never tested in 30 days.</div></div>
+            <div class="principle"><div class="principle-title">◈ The open question</div><div class="principle-body">One question the system cannot answer. The gap only the man can close.</div></div>
+          </div>
+        </div>
+
+        <div class="vstage">
+          <div class="vstage-day">DAYS 30 – 60</div>
+          <div class="vstage-tag">DEEPENING INTELLIGENCE</div>
+          <h3>The system stops estimating. It knows.</h3>
+          <div class="vstage-body">
+            <p>Between Day 30 and Day 60, the system moves from hypothesis to confirmation. The patterns detected in the first 30 days are either confirmed by continued evidence or retired. New patterns emerge. The Predictor's estimates become more accurate because behavioural data has accumulated across diverse conditions.</p>
+            <p class="vstage-detail">The man notices the briefs becoming more specific. Levers stop being general principles and become condition-specific recommendations — because the system now knows which conditions he is likely to be in on any given day, and what has worked under those conditions before.</p>
+          </div>
+        </div>
+
+        <div class="vstage">
+          <div class="vstage-day">DAY 60</div>
+          <div class="vstage-tag">THE BASELINE CONFIRMED</div>
+          <h3>Your personal norms are live.</h3>
+          <div class="vstage-body">
+            <p>At Day 60, the system has enough data to establish your personal operational norms. The bootstrap baseline is gone. Every score from this point is comparative — to you, not to a population.</p>
+            <p class="vstage-detail">The Day 60 brief introduces the INTEL mode designation — a new framing for high-readiness, high-capacity days that sits above COMMAND in its level of analytical depth. The man can see the distance from Day 1.</p>
+          </div>
+        </div>
+
+        <div class="vstage">
+          <div class="vstage-day">DAY 75</div>
+          <div class="vstage-tag">THE OPERATING PRINCIPLES REVIEW</div>
+          <h3>Are your principles still yours?</h3>
+          <div class="vstage-body">
+            <p>At Day 75, the system inserts a Principles Review block into the morning brief. Not a prompt to change anything. A presentation of his five Operating Principles alongside 75 days of performance data — showing which principles have driven his best decisions and which may need revision.</p>
+            <p class="vstage-detail">Some men add a principle at Day 75. Some retire one that has never been tested. Some find a principle they wrote in the first week does not reflect how they actually think after 75 days of systematic self-observation. The man edits his own principles. The system does not.</p>
+          </div>
+        </div>
+
+        <div class="vstage">
+          <div class="vstage-day">DAYS 75 – 90</div>
+          <div class="vstage-tag">CONSOLIDATION</div>
+          <h3>Operating from your own intelligence.</h3>
+          <div class="vstage-body">
+            <p>The final weeks are not a crescendo. They are the man operating with a model of himself that he did not have ninety days ago. The system has confirmed patterns. The baseline is personal. The Operating Principles have been tested and revised. The Decision Advisor has his full history to reason from.</p>
+            <p class="vstage-detail">Some men in this window stop asking the Decision Advisor for confirmation on decisions that would previously have felt uncertain. Not because they are overconfident. Because the system has taught them to see the same things the four AI lanes would surface. That is the product working at its deepest level.</p>
+          </div>
+        </div>
+
+        <div class="vstage">
+          <div class="vstage-day">DAY 90</div>
+          <div class="vstage-tag">THE IDENTITY CONFIRMATION</div>
+          <h3>One question. Ten seconds of silence.</h3>
+          <div class="vstage-body">
+            <p>Day 90 replaces the morning brief entirely. The system presents the man's 90-day operating record — his patterns, his decision history, his principle adherence, his readiness baseline. Then it stops.</p>
+            <p class="vstage-detail">One question appears on screen. Ten seconds pass before anything else is available. The system is not waiting for a typed answer. It is giving the man time to actually answer the question internally before he moves on.</p>
+          </div>
+          <div class="pullquote">What has changed about how you operate in the last 90 days?<br /><br />Not what you hope has changed.<br />What you know has changed — from your own data and your own experience.<br /><br />State it. Even to yourself.</div>
+          <div class="vstage-detail">The system then closes with five lines. They are the same five lines for every man who reaches Day 90. They are never generated by the AI — they are delivered by the system directly, because this moment is too important to vary.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" style="text-align:center">
+      <div class="eyebrow" style="text-align:center">BEYOND 90</div>
+      <h2 style="text-align:center">The arc <strong>does not end.</strong></h2>
+      <p class="lead" style="margin-top:8px">At Day 90, the man has a model of himself that took ninety days of daily use to build. That model does not disappear. It becomes the baseline from which Day 91 is read. The patterns accumulate. The Operating Principles deepen. The Decision Advisor's pattern-matching becomes richer with every decision logged. Ninety days is not completion. It is where the system becomes genuinely powerful.</p>
+    </section>
+  </div>
+
+  <FinalCTA
+    heading="Ninety days from today."
+    headingStrong="The arc starts on Day 1."
+    sub="Day 1 starts when you do."
+    cta="Begin your 8-day trial →"
+  />
+</BaseLayout>

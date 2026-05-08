@@ -1,10 +1,24 @@
 ---
+interface Props {
+  eyebrow?: string;
+  heading?: string;
+  headingStrong?: string;
+  sub?: string;
+  cta?: string;
+}
+const {
+  eyebrow,
+  heading = 'Stop guessing.',
+  headingStrong = 'Start operating.',
+  sub = 'Eight days. No credit card. The system does the rest.',
+  cta = 'Begin assessment →',
+} = Astro.props;
 ---
 <section class="final-cta">
   <div class="final-cta-inner">
-    <div class="eyebrow">THE SYSTEM THAT KNOWS HOW YOU WORK</div>
-    <h2>Stop guessing.<br /><strong>Start operating.</strong></h2>
-    <p>8-day free trial. 90 seconds each morning. Your first confirmed pattern by Day 7.</p>
-    <a href="/pricing" class="cta-btn">Begin your assessment <span class="cta-arrow">→</span></a>
+    {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+    <h2>{heading}<br /><strong>{headingStrong}</strong></h2>
+    <p>{sub}</p>
+    <a href="/#pricing" class="cta-btn">{cta}</a>
   </div>
 </section>
