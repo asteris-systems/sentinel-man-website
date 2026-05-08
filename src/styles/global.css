@@ -588,6 +588,166 @@ footer.site-footer {
   font-size: 10px;
 }
 
+/* PROSE — long-form legal/contact pages */
+.prose-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 32px 120px;
+}
+.prose-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.prose-title {
+  font-family: 'Rubik', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.prose-title strong { font-weight: 600; color: var(--gold); }
+.prose-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.prose-meta span { display: inline-block; margin-right: 24px; }
+.prose {
+  color: var(--secondary);
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+.prose h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 48px 0 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.prose h2:first-child { padding-top: 0; border-top: none; margin-top: 0; }
+.prose h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gold);
+  margin: 32px 0 10px;
+  letter-spacing: 0.01em;
+}
+.prose p { margin-bottom: 18px; }
+.prose strong { color: var(--text); font-weight: 500; }
+.prose a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(255,220,0,0.3); transition: border-color 0.2s; }
+.prose a:hover { border-color: var(--gold); }
+.prose ul, .prose ol { margin: 0 0 18px 22px; }
+.prose li { margin-bottom: 6px; }
+.prose hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+.prose blockquote {
+  border-left: 2px solid var(--gold);
+  padding: 4px 0 4px 20px;
+  margin: 24px 0;
+  color: var(--text);
+  font-style: italic;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+}
+.prose th, .prose td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.prose th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 500;
+  background: rgba(10, 48, 96, 0.3);
+}
+.prose td { color: var(--secondary); }
+.prose code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--gold);
+  background: rgba(10, 48, 96, 0.4);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+.prose .callout {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  background: rgba(10, 48, 96, 0.25);
+  padding: 18px 22px;
+  margin: 24px 0;
+  border-radius: 4px;
+  color: var(--text);
+}
+.prose .callout strong { color: var(--gold); }
+
+/* CONTACT page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 32px 0 16px;
+}
+.contact-card {
+  background: #0D1F35;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 24px;
+}
+.contact-card-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.contact-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--secondary);
+  margin-bottom: 0;
+}
+.crisis-list {
+  list-style: none !important;
+  margin: 16px 0 0 !important;
+  padding: 0 !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+}
+.crisis-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+  margin: 0 !important;
+  font-size: 14px;
+}
+.crisis-list li strong { color: var(--text); }
+.crisis-list li span { font-family: 'JetBrains Mono', monospace; color: var(--gold); }
+
+@media (max-width: 700px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .crisis-list { grid-template-columns: 1fr; }
+}
+
 /* RESPONSIVE */
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; }
