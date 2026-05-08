@@ -1,0 +1,23 @@
+---
+const links = [
+  { href: '/how-it-works', label: 'How it works' },
+  { href: '/the-arc', label: 'The 90-day arc' },
+  { href: '/about', label: 'About' },
+  { href: '/pricing', label: 'Pricing' },
+];
+---
+<nav class="site-nav">
+  <a href="/" aria-label="Sentinel Man home">
+    <img src="/logo.png" alt="Sentinel Man" class="nav-logo" />
+  </a>
+  <a href="/" class="nav-wordmark">SENTINEL MAN</a>
+  <div class="nav-links">
+    {links.map((l, i) => (
+      <>
+        {i > 0 && <span class="nav-sep">◆</span>}
+        <a href={l.href} class="nav-link">{l.label}</a>
+      </>
+    ))}
+    <a href="/pricing" class="nav-cta">BEGIN ASSESSMENT</a>
+  </div>
+</nav>

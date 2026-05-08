@@ -1,0 +1,42 @@
+---
+const features = [
+  'Daily Morning Brief',
+  'Decision Advisor (4-lane AI)',
+  '90-second check-in',
+  'Provocateur challenge system',
+  'Pattern detection',
+  'Network tracking',
+  'Weekly debrief',
+  'Decision outcome tracking',
+  'Operating Principles',
+  'Full data export',
+  '90-day milestone arc',
+  'iOS + Android + Web',
+];
+---
+<section class="section">
+  <div class="section-head" style="margin-bottom:48px">
+    <div class="eyebrow">PRICING</div>
+    <h2 style="margin-bottom:12px">One system. <strong>Full access.</strong></h2>
+    <p style="font-size:15px;color:var(--body)">8-day free trial. No card required. Cancel any time.</p>
+  </div>
+  <div class="pricing-card">
+    <div class="price-label">SENTINEL MAN</div>
+    <div class="price-row">
+      <span class="price-num">$24</span>
+      <span class="price-per">.99/mo</span>
+    </div>
+    <div class="price-yearly">or $199/year — save 33%</div>
+    <div class="price-rule"></div>
+    <div class="price-feats">
+      {features.map((f) => (
+        <div class="feat">
+          <span class="feat-check">✓</span>
+          <span class="feat-text">{f}</span>
+        </div>
+      ))}
+    </div>
+    <a href="#" class="price-cta">Start your 8-day free trial</a>
+    <div class="price-note">No credit card required to start</div>
+  </div>
+</section>

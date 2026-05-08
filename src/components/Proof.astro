@@ -1,0 +1,29 @@
+---
+const quotes = [
+  {
+    quote: 'I stopped guessing when to make decisions. The data tells me when my window is open and when it is not.',
+    attr: 'FOUNDER · TECH · SYDNEY',
+    color: '#FFDC00',
+  },
+  {
+    quote: 'The Provocateur asked me a question at Day 21 that I had been avoiding for three years. One question. That was enough.',
+    attr: 'DIRECTOR · FINANCE · MELBOURNE',
+    color: '#0074D9',
+  },
+  {
+    quote: 'This is not a wellness app. That is why it works. It treats me like an operator, not a patient. The difference is everything.',
+    attr: 'PARTNER · LAW · BRISBANE',
+    color: '#34D399',
+  },
+];
+---
+<section class="section" style="padding-top:56px;padding-bottom:56px">
+  <div class="proof">
+    {quotes.map((q) => (
+      <div class="proof-card" style={`--accent:${q.color}`}>
+        <div class="proof-quote">"{q.quote}"</div>
+        <div class="proof-attr">{q.attr}</div>
+      </div>
+    ))}
+  </div>
+</section>

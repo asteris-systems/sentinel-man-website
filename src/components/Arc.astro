@@ -1,0 +1,29 @@
+---
+const nodes = [
+  { day: 'DAY 7', title: 'First Signal', body: 'System surfaces the first confirmed pattern from your own data.' },
+  { day: 'DAY 14', title: 'First Real Decision', body: 'Decision Engine engages. Four lanes. One synthesis. 26 seconds.' },
+  { day: 'DAY 21', title: 'Provocateur', body: 'One question on the principle/behaviour gap you have been avoiding.' },
+  { day: 'DAY 30', title: 'The Mirror', body: 'Full operational record. Readiness, decisions, sleep, network, defining pattern.' },
+  { day: 'DAY 60', title: 'The Evidence', body: 'Baseline comparison. Day 1–7 versus Day 54–60. The data shows the shift.' },
+  { day: 'DAY 90', title: 'Identity', body: 'Complete record. One question: what has changed about how you operate?' },
+];
+---
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">THE ARC</div>
+    <h2>90 days of operational data.<br /><strong>Your record. Your answer.</strong></h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-rail"></div>
+    <div class="timeline-grid">
+      {nodes.map((n) => (
+        <div class="tl-node">
+          <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+          <div class="tl-day">{n.day}</div>
+          <div class="tl-title">{n.title}</div>
+          <div class="tl-body">{n.body}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
