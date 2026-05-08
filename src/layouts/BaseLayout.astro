@@ -6,18 +6,31 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
   image?: string;
   noindex?: boolean;
 }
 
 const {
-  title = 'SENTINEL MAN — Performance Intelligence',
-  description = 'Performance intelligence system for high-stakes men. Daily command brief, four-lane decision analysis, 90-day operational record.',
+  title = 'SENTINEL MAN — Performance Intelligence for Men',
+  description = 'Not a wellness app. A performance intelligence system. Daily brief, 4-lane decision analysis, pattern detection, 90-day transformation arc. Built for men who operate at a high level.',
+  ogTitle,
+  ogDescription,
+  twitterTitle,
+  twitterDescription,
   image = '/og-image.png',
   noindex = false,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const _ogTitle = ogTitle ?? title;
+const _ogDescription = ogDescription ?? description;
+const _twitterTitle = twitterTitle ?? _ogTitle;
+const _twitterDescription = twitterDescription ?? _ogDescription;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 const socialImageURL = new URL(image, Astro.site).toString();
 ---
 <!DOCTYPE html>
@@ -25,9 +38,36 @@ const socialImageURL = new URL(image, Astro.site).toString();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{title}</title>
+
+  <!-- Primary meta -->
   <meta name="description" content={description} />
-  {noindex && <meta name="robots" content="noindex, nofollow" />}
+  <meta name="author" content="Nick Lord" />
+  <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
   <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph (Facebook, LinkedIn, iMessage, Slack, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SENTINEL MAN" />
+  <meta property="og:title" content={_ogTitle} />
+  <meta property="og:description" content={_ogDescription} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={socialImageURL} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="SENTINEL MAN — Performance Intelligence for men who operate at a high level" />
+  <meta property="og:locale" content="en_AU" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={_twitterTitle} />
+  <meta name="twitter:description" content={_twitterDescription} />
+  <meta name="twitter:image" content={socialImageURL} />
+  <meta name="twitter:image:alt" content="SENTINEL MAN — Performance Intelligence System" />
+
+  <!-- App store (uncomment after App Store submission) -->
+  <!-- <meta name="apple-itunes-app" content="app-id=REPLACE_AFTER_SUBMISSION" /> -->
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
@@ -35,22 +75,6 @@ const socialImageURL = new URL(image, Astro.site).toString();
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#001F3F" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonicalURL} />
-  <meta property="og:site_name" content="SENTINEL MAN" />
-  <meta property="og:image" content={socialImageURL} />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={socialImageURL} />
-
-  <title>{title}</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
