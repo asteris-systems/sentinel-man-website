@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+
+const faqs = [
+  {
+    group: 'WHAT IT IS',
+    items: [
+      {
+        q: 'Is this therapy?',
+        a: 'No. SENTINEL MAN is a performance intelligence system, not a medical or mental health service. The clinical frameworks embedded in its design are methodology — they shape how the system reasons about your data. They are not clinical treatment delivered to you. If you need clinical care, see a clinician. If you are in crisis, call Lifeline on 13 11 14.',
+      },
+      {
+        q: 'How is this different from Headspace, Calm, or BetterHelp?',
+        a: 'Those products are designed around journalling, feelings language, and therapeutic check-ins. SENTINEL MAN is designed around decisions, operational state, and pattern intelligence. It tracks what you do, the conditions you do it under, and what produces results. It speaks the way men at the operational edge actually think. Different door. Different audience. Different category.',
+      },
+      {
+        q: 'Why call it "performance intelligence" instead of "mental wellness"?',
+        a: 'Because the framing changes who shows up. Men who would not open a wellness app will open this. The clinical work happens inside the performance frame — invisibly. The outcomes are the same. The door is different.',
+      },
+    ],
+  },
+  {
+    group: 'THE PRODUCT',
+    items: [
+      {
+        q: 'How long until I see something useful?',
+        a: 'Day 4 is when the system surfaces its first emerging signal. Day 7 is when a confirmed pattern appears in your data. Day 30 is when your full operating profile is built. The system is deliberately slow at first because it refuses to fabricate insight before the data supports it.',
+      },
+      {
+        q: 'How long does the daily check-in take?',
+        a: 'Under 90 seconds. Five inputs. No typing required unless you choose to add a carry-forward note. The check-in is deliberately minimal because a tool you do not use daily produces no intelligence at all.',
+      },
+      {
+        q: 'What is the Decision Advisor?',
+        a: 'When you face a significant decision, you submit it. Four AI models analyse it in parallel — the Reasoner (your history and principles), the Contrarian (kill shots and worst case), the Context Enhancer (second-order effects), the Predictor (what you will actually do). 26 seconds later, a single synthesised assessment arrives. Four perspectives, already resolved.',
+      },
+      {
+        q: 'Will it tell me what to do?',
+        a: 'No. The system produces intelligence. You make decisions. SENTINEL MAN gives you better information and better questions than you had without it. The decision authority stays with you. Always.',
+      },
+    ],
+  },
+  {
+    group: 'YOUR DATA',
+    items: [
+      {
+        q: 'Who sees my data?',
+        a: 'You. The data you enter is processed to deliver the product to you and is not sold, shared with third parties for marketing, or made available to your employer, your insurer, or your network. Read the Privacy Policy for the full disclosure of which systems process your data and why.',
+      },
+      {
+        q: 'Where is my data stored?',
+        a: 'On Australian-region infrastructure, encrypted in transit and at rest. The methodology that produces your intelligence is stored separately from the application and is not accessible from any public endpoint.',
+      },
+      {
+        q: 'Can my employer see that I use it?',
+        a: 'No. SENTINEL MAN is man-sovereign. You buy it. You own the data. There is no institutional layer, no employer involvement, no HR visibility. Nobody knows you use it unless you tell them.',
+      },
+      {
+        q: 'Can I export my data?',
+        a: 'Yes. Settings → Export Data delivers a CSV of every check-in, decision, and pattern at any time. You can also delete your account and all associated data permanently from the same screen.',
+      },
+    ],
+  },
+  {
+    group: 'PRICING & BILLING',
+    items: [
+      {
+        q: 'Why is the iOS price higher than the web price?',
+        a: 'Apple and Google take a 15–30% cut on in-app subscriptions. Subscribing through sentinelman.com via Stripe avoids that fee, so the web price is $19.99/mo or $199/yr. iOS and Android in-app pricing is $24.99/mo or $249/yr to offset the platform fees. You get the same product either way.',
+      },
+      {
+        q: 'How does the free trial work?',
+        a: 'Seven days. Full access to every engine. No credit card required to start. If you do not subscribe at the end of the trial, your account becomes inactive — no charge.',
+      },
+      {
+        q: 'Can I cancel anytime?',
+        a: 'Yes. Cancel via Settings on web, or through the App Store or Google Play subscriptions screen on mobile. Cancellation takes effect at the end of the current billing period — no prorated refunds on monthly. Annual subscriptions can be refunded within 14 days of renewal if unused.',
+      },
+    ],
+  },
+  {
+    group: 'OPERATIONAL',
+    items: [
+      {
+        q: 'What if I miss a day?',
+        a: 'The system has a STANDBY mode for skipped days. No chase message, no guilt prompt. A man who is too crushed to check in does not need a system lecturing him. The next day you pick up where you left off. Your baseline calculation accounts for missed days.',
+      },
+      {
+        q: 'I am in a mental health crisis. Should I use this?',
+        a: 'No. SENTINEL MAN is designed to help men operate better over time. It is not designed for acute crisis management. If you are in immediate danger, call 000. If you are struggling now, call Lifeline on 13 11 14, MensLine Australia on 1300 78 99 78, or Beyond Blue on 1300 22 4636.',
+      },
+      {
+        q: 'Does it work for men outside Australia?',
+        a: 'Yes. The system is available globally. Crisis resources defaulted in-app are Australian — international users should adjust to their local equivalents.',
+      },
+    ],
+  },
+];
+---
+<BaseLayout title="FAQ — SENTINEL MAN" description="Common questions about Sentinel Man — what it is, how it works, your data, pricing, and crisis support.">
+  <div class="content-wrap">
+    <div class="content-hero">
+      <div class="eyebrow">FREQUENTLY ASKED</div>
+      <h1>The questions <strong>worth answering.</strong></h1>
+      <p class="lead">If a question is not answered here, write to <a href="mailto:support@sentinelman.com" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,220,0,0.3)">support@sentinelman.com</a>. We read every message.</p>
+    </div>
+
+    {faqs.map((group) => (
+      <section class="content-section">
+        <div class="eyebrow">{group.group}</div>
+        <div class="faq-list">
+          {group.items.map((item) => (
+            <details class="faq-item">
+              <summary>{item.q}</summary>
+              <div class="faq-answer">{item.a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <FinalCTA
+    heading="Still have a question?"
+    headingStrong="Write to us."
+    sub="support@sentinelman.com — we respond within 48 hours AEST."
+    cta="Begin your 7-day trial →"
+  />
+</BaseLayout>
+
+<style>
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .faq-item {
+    background: rgba(13, 31, 53, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0;
+    transition: border-color 0.2s;
+  }
+  .faq-item[open] { border-color: rgba(255, 220, 0, 0.4); }
+  .faq-item summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 22px 28px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+  .faq-answer {
+    padding: 0 28px 24px;
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--secondary);
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Off the grid — SENTINEL MAN" noindex>
+  <div class="four-oh-four">
+    <div class="eyebrow">STATUS · OFF GRID</div>
+    <h1>404 — <strong>position lost.</strong></h1>
+    <p>The page you were heading to isn't on the map. Either it never existed or it has been retired. Hold position and pick a new heading.</p>
+    <div class="four-actions">
+      <a href="/" class="cta-btn">Return to base <span class="cta-arrow">→</span></a>
+      <a href="/contact" class="four-link">Report it</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .four-oh-four {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 32px 160px;
+    text-align: center;
+  }
+  .four-oh-four .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+  .four-oh-four h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 28px;
+  }
+  .four-oh-four h1 strong { font-weight: 600; color: var(--gold); }
+  .four-oh-four p {
+    max-width: 520px;
+    margin: 0 auto 44px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--secondary);
+  }
+  .four-actions {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .four-link {
+    color: var(--body);
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(139, 164, 200, 0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .four-link:hover { color: var(--gold); border-color: var(--gold); }
+</style>
