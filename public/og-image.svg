@@ -1,223 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#001F3F;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#001228;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#001F3F"/>
+      <stop offset="100%" stop-color="#000F1F"/>
     </linearGradient>
-    <linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#FFDC00;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#FFDC00;stop-opacity:0.3" />
+    <linearGradient id="goldRail" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#FFDC00" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFDC00" stop-opacity="0.25"/>
     </linearGradient>
-    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FFDC00;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#FFDC00;stop-opacity:0.04" />
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <radialGradient id="shieldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FFDC00" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#FFDC00" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FFDC00" stop-opacity="0"/>
+    </radialGradient>
+    <symbol id="shield" viewBox="0 0 512 512">
+      <path d="M256 32
+               C 256 32, 200 38, 144 50
+               C 110 56, 88 60, 64 64
+               L 64 232
+               C 64 308, 100 372, 158 416
+               C 188 438, 220 456, 240 466
+               C 248 470, 252 472, 256 472
+               C 260 472, 264 470, 272 466
+               C 292 456, 324 438, 354 416
+               C 412 372, 448 308, 448 232
+               L 448 64
+               C 424 60, 402 56, 368 50
+               C 312 38, 256 32, 256 32 Z" fill="currentColor"/>
+    </symbol>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <!-- Navy gradient background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
 
   <!-- Subtle grid pattern -->
-  <g opacity="0.04">
-    <line x1="0" y1="105" x2="1200" y2="105" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="0" y1="210" x2="1200" y2="210" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="0" y1="315" x2="1200" y2="315" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="0" y1="420" x2="1200" y2="420" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="0" y1="525" x2="1200" y2="525" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="200" y1="0" x2="200" y2="630" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="400" y1="0" x2="400" y2="630" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="600" y1="0" x2="600" y2="630" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="800" y1="0" x2="800" y2="630" stroke="#FFDC00" stroke-width="1"/>
-    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#FFDC00" stroke-width="1"/>
+  <g opacity="0.05" stroke="#FFDC00" stroke-width="1">
+    <line x1="0" y1="105"  x2="1200" y2="105"/>
+    <line x1="0" y1="210"  x2="1200" y2="210"/>
+    <line x1="0" y1="315"  x2="1200" y2="315"/>
+    <line x1="0" y1="420"  x2="1200" y2="420"/>
+    <line x1="0" y1="525"  x2="1200" y2="525"/>
+    <line x1="240" y1="0"  x2="240"  y2="630"/>
+    <line x1="480" y1="0"  x2="480"  y2="630"/>
+    <line x1="720" y1="0"  x2="720"  y2="630"/>
+    <line x1="960" y1="0"  x2="960"  y2="630"/>
   </g>
 
   <!-- Gold top line -->
-  <rect x="0" y="0" width="1200" height="5" fill="url(#goldLine)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#goldRail)"/>
 
-  <!-- Large background icon &#8212; officer silhouette, very faint -->
-  <g opacity="0.06" transform="translate(820, 60)">
-    <!-- Shield outline -->
-    <path d="M190,10 L370,10 L370,280 Q280,360 190,400 Q100,360 10,280 L10,10 Z"
-          fill="none" stroke="#FFDC00" stroke-width="3"/>
-    <!-- Officer figure -->
-    <g transform="translate(100, 40)">
-      <!-- Cap -->
-      <ellipse cx="90" cy="52" rx="55" ry="8" fill="#FFDC00"/>
-      <rect x="50" y="30" width="80" height="25" rx="4" fill="#FFDC00"/>
-      <ellipse cx="90" cy="30" rx="38" ry="22" fill="#FFDC00"/>
-      <!-- Star on cap -->
-      <polygon points="90,14 93,22 102,22 95,27 98,36 90,31 82,36 85,27 78,22 87,22"
-               fill="#001F3F"/>
-      <!-- Face -->
-      <ellipse cx="90" cy="70" rx="26" ry="22" fill="#FFDC00"/>
-      <!-- Neck -->
-      <rect x="80" y="88" width="20" height="14" fill="#FFDC00"/>
-      <!-- Shoulders / jacket -->
-      <path d="M30,102 L60,98 L80,102 L80,190 L30,190 Z" fill="#FFDC00"/>
-      <path d="M100,102 L120,98 L150,102 L150,190 L100,190 Z" fill="#FFDC00"/>
-      <!-- Lapels -->
-      <path d="M80,102 L90,130 L80,190" fill="#001F3F" opacity="0.4"/>
-      <path d="M100,102 L90,130 L100,190" fill="#001F3F" opacity="0.4"/>
-      <!-- Epaulettes -->
-      <rect x="24" y="96" width="32" height="10" rx="3" fill="#001F3F" opacity="0.5"/>
-      <rect x="124" y="96" width="32" height="10" rx="3" fill="#001F3F" opacity="0.5"/>
-      <!-- Medals -->
-      <rect x="108" y="130" width="8" height="8" fill="#001F3F" opacity="0.3"/>
-      <rect x="120" y="130" width="8" height="8" fill="#001F3F" opacity="0.3"/>
-      <rect x="108" y="142" width="8" height="8" fill="#001F3F" opacity="0.3"/>
-      <rect x="120" y="142" width="8" height="8" fill="#001F3F" opacity="0.3"/>
-      <!-- Belt -->
-      <rect x="30" y="186" width="120" height="10" rx="2" fill="#001F3F" opacity="0.4"/>
-      <rect x="82" y="183" width="16" height="16" rx="2" fill="#001F3F" opacity="0.4"/>
-      <!-- Legs -->
-      <rect x="50" y="196" width="32" height="80" fill="#FFDC00"/>
-      <rect x="98" y="196" width="32" height="80" fill="#FFDC00"/>
-      <!-- Saluting arm -->
-      <path d="M150,108 L180,90 L195,65 L185,58 L168,80 L140,100 Z" fill="#FFDC00"/>
-      <!-- Hand at brow -->
-      <ellipse cx="192" cy="62" rx="12" ry="8" fill="#FFDC00"/>
-    </g>
+  <!-- Hero shield (right side) — radial glow + big shield -->
+  <ellipse cx="935" cy="300" rx="290" ry="290" fill="url(#shieldGlow)"/>
+  <g transform="translate(740, 90)" color="#FFDC00">
+    <use href="#shield" width="400" height="400"/>
   </g>
 
-  <!-- Left content area -->
-
-  <!-- Logo mark — shield -->
-  <image x="68" y="68" width="72" height="72" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAMAAABIw9uxAAAC91BMVEVMaXH/2wD/2wD/3AD/2wD/3AD/2wD/2wD//wD/3AD/3AD/2wD/3QD/2wD/2wD/3AD/2wD/3AD/3AD/3AD/2wD/3AD/2gD/2wD/2wD/3AD/2QD/3AD/3QD/zAD//wD/vwD/1AD/1wD/2wD/3AD/2wD/3AD//wD/2wD/4QD/3AD/2gD/4gD/2wD/2wD/2wD/3AD/2wD/2gD/3AD/3AD/2wD/2gD/2QD/2AD/3wD/1AD/0AD/2wD/3AD/1wD/3QD/2gD/3AD/3AD/2wD/3QD/2wD/3wD/5QD/2wD/3AD/2wD/3AD/2wD/2gD/2wD/3AD/3AD/3QD/3AD/2wD/2wD/2wD/3AD/3AD/2wD/3AD/3QD/3AD/2QD/3AD/3QD/2gD/3AD/2wD/2wD/2wD/2wD/3QD/3AD/2gD/3AD/3AD/2wD/2wD/3gD/2wD/3gD/2wD/3AD/2wD/4gD/2wD/3QD/2QD/2AD/3QD/3gD/2gD/1gD/3AD/3AD/2wD/2gD/3wD/3AD/2wD/3AD/2wD/2wD/3AD/3AD/3AD/2wD/3AD/2wD/3QD/3QD/3AD/2wD/2wD/3AD/3wD/2wD/2wD/3AD/2wD/2wD/2QD/2wD/3AD/2gD/3AD/3AD/3QD/3AD/3QD/3AD/3AD/3QD/3AD/2gD/2wD/3AD/3AD/2wD/2gD/3AD/3AD/3AD/3AD/3AD/3AD/2wD/3wD/3AD/2wD/3AD/2wD/2wD/2wD/3AD/3AD/2wD/2wD/3AD/3AD/3AD/2wD/2wD/3AD/2wD/3AD/2gD/2wD/2wD/2wD/2wD/2wD/2wD/2gD/3AD/4AD/2wD/2wD/3AD/3AD/2wD/3AD/2wD/2wD/3AD/2wD/2wD/2wD/2wD/3QD/3AD/3AD/2QD/3QD/3AD/3AD/3AD/3QD/3AD/2wD/3AD/3AD/3QD/3AD/2wD/2wD/2gD/2wD/2wD/3QD/2wD/3AD/2wD/3AD/3AD/3AD/3AD/3AD/2wD/3AD/3AD/3AD/2wD/3ABIqzyQAAAA/HRSTlMA/V6qkXeI/gGib4BExFWZs9UzZrv7TfwrzCLdPAUCBAYa5vnu+gP3EfgHCfXo9vTwI/Px7w4wIQgMC0HqDQ8VQuvnF+0YCsry6exHHNi5zS7BVtEkFsfTJT1hKag1RuRdHdq6U9tUSc7SUCeuH6zGlxLgYj4UHi9qE0reyz8gxdeN0KeyNHa81uFLJrc6nbgQOYHA38Ibj8hjQ3VMk0VSqS3cMclg5bYqcIWwoX6/pChZpc9tkIKMjqagLIuviXKGV5JcSGWec0CYOH8Zg4q+ZzJYtXtfa3l0vTbjmjdp1GiEW+J6m3xabmyfcZZOeE+cw5SVsaujZH1RO7RjyFmOAAAACXBIWXMAADsOAAA7DgHMtqGDAAAccklEQVR42u3d9WOV96EG8BPiJAQJITiB4E5xikspXmihUCil7u5ddXX3rr62q2xtb2WVubu7y93udu/ufNft/HBPoGtXSEJOcuR93+/n8yfkPM+Tc15NpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6aWyfuu4VpQNGjhnUt2dNfe3AIf4kkHgTBtbW1/TsO6ghvbeRA0rLyuv6DK/yR4KkWXTkpuvOuqX3lPR+Tel9y1nXbTpykb8ZJOI/fuab/tR01sZlfhtkvhGM9TeE2Bm/p/gj0l02Zs8QzPQ3hehbduuuu17csiqdc6u2vHjXrluX+QtDFI0d3PIvf3o6z3b/Mug3cJg/OERB054v+5PTBTVqzw+Duf7+ULQz+eWZE3ol6WLKnDysqK8d7tOAwv3P75dp/oh0hLTsQDffByCvhme+7fca1JiOqpE9Mr8L+o/2QUGuv+7XlA6YmI6FzPGBsszFxS4phK4a37/lh/6kdAxNbTk8MHiBzxCyNyxzcL+s2If4cnN4oDpzumCOTxQ6ZO61uz552pWj0oky6srTPrnrWkcJob1f+t0yx/hK0smVOUrYvXagTxpSex3eL+u7NB2IGS2/CpwsgJbqd+/ZY0o6QM29S2vMAGFX/4B04PbMwFBxQPXNACTastrf37ZS9dtwwMrbfl/rhmOSqKl/5gj/CCXv2JmCwU4YkhSjM/fuVPdu1OysjOiVubtovPQQZyt2/vDDG8Zoc6cfR7bhwz/cuUKOiOO//Rrf+HP1m6DMlwFiY0GfbmU9Juptjq8l7l3dvfZ86SLKhrf82i/R1rweGXC2kOgZMuvcT2+coaEFuZJ446fPneVVZkSl+/0zX/kn62XhfxIMniB9pIp7cr+sh6P8RdPQsgLz5JAiHOob3L16QLMOFl/joF41/S6WSApl4eLrdhxTqXlRUnnMjusWL5RN8v17v95h/iifJCgffJCUkg+jW37vj1OyWBwXaJJXUrk8v1/Td4puxegcwYAy1wuQo+73mq9RcTQ9cwmx5w+ScgNvOvCbi50pJPtLet3A6xJiQnPH4PoyT+tKJ/S5Y9Xl/dxcTFtn+Opqeg1yej+Am4vrnStkr4d0Vg9whi+kc4WZqwc9hJTUwsy9+32XKESYDh6QecbAZi0I0jDf+NlzgDDzMnP3FQb3jd89fOzzm6BKOZJtZss3/vniTuumt/wmWKQnSfzGn3lIZ6nbeOjYb4JufeboTFKMHZx5EZcn9pDO7olDpTX9BvpNkIr9xbyThJnOmtpyIfECTUrF8bH8vvHjLUWBfuP3WH7y8ptAv9y+R8BmuLkwkt/4bz6u5ozjfeOnIEqOP6PmuJtH611kvvF7Wg/OEwR4VY9j/ETgN4F3FrqqB9cOuZ8g5Tp+0u4xJpWnZ/X0XS1mpKN+j7HnDuXWQdcecdWxS0WL+Fh67FVHXOu5Q101ZPePfU/nJMaHBsxAJ4/zlXtMF8k4NFDh7sJsj/O5e49EGbX7CKGLh/ZXfRf1kE7yk8lLnSho/Xq+zOP4DxYQQjCu5QUFriF8q/p9Xc9HcKa2nC8cHvwACAIhMwBgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAOAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADAAbAAIABMABgAAwAGAADgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAEcAAGAAwAAYADIABAANgAMAAGAAwAAYADIABAANgAMAAGAAwAAYADIABAANgAMAAGAAwAAYADIABAANgAMAAGAAwAAYADIABAANgAMAAGAAwAAYADIABAANgAMAAGAAwAAYADIABAANgAMAAGAAwAAYADIABAANgAMAAGAAwAAYADIABAANgAMAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAgAEwAGAADAAYAAMABsAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMABgAAwAGwACAATAAYAAMAAbAAIABMABgAAwAGIBwVMoA4SoJfgBGCQHhag5+ACYLAeGaGPwAHCAEhGt68AMwQwgI1/Lg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" preserveAspectRatio="xMidYMid meet"/>
-
-  <!-- Wordmark -->
-  <text x="152" y="100" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="13" font-weight="600" fill="#FFDC00" letter-spacing="3">SENTINEL MAN</text>
-  <text x="152" y="122" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="11" fill="#8BA4C8" letter-spacing="2">PERFORMANCE INTELLIGENCE</text>
+  <!-- Brand mark (top-left): small shield + wordmark -->
+  <g transform="translate(72, 70)" color="#FFDC00">
+    <use href="#shield" width="48" height="48"/>
+  </g>
+  <text x="138" y="92"
+        font-family="'JetBrains Mono', 'Courier New', monospace"
+        font-size="17" font-weight="600" fill="#FFDC00"
+        letter-spacing="3.4">SENTINEL MAN</text>
+  <text x="138" y="114"
+        font-family="'JetBrains Mono', 'Courier New', monospace"
+        font-size="11" fill="#8BA4C8"
+        letter-spacing="2.4">PERFORMANCE INTELLIGENCE</text>
 
   <!-- Main headline -->
-  <text x="72" y="228" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="58" font-weight="700" fill="#F1F5F9" letter-spacing="-1">
-    Performance
-  </text>
-  <text x="72" y="298" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="58" font-weight="700" fill="#FFDC00" letter-spacing="-1">
-    intelligence
-  </text>
-  <text x="72" y="368" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="58" font-weight="700" fill="#F1F5F9" letter-spacing="-1">
-    for high-stakes men.
-  </text>
+  <text x="72" y="240"
+        font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
+        font-size="60" font-weight="700"
+        fill="#F1F5F9" letter-spacing="-1.2">Performance</text>
+  <text x="72" y="312"
+        font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
+        font-size="60" font-weight="700"
+        fill="#FFDC00" letter-spacing="-1.2">intelligence</text>
+  <text x="72" y="384"
+        font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
+        font-size="60" font-weight="700"
+        fill="#F1F5F9" letter-spacing="-1.2">for high-stakes men.</text>
 
   <!-- Descriptor -->
-  <text x="72" y="430" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="22" font-weight="400" fill="#C2D6EF">
-    Daily brief &#183; Decision analysis &#183; Pattern intelligence &#183; 90-day arc
-  </text>
+  <text x="72" y="442"
+        font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
+        font-size="20" font-weight="400" fill="#C2D6EF">Daily brief &#183; Decision analysis &#183; Pattern intelligence &#183; 90-day arc</text>
 
-  <!-- Divider line -->
-  <line x1="72" y1="468" x2="580" y2="468" stroke="#FFDC00" stroke-width="1" opacity="0.3"/>
+  <!-- Divider -->
+  <line x1="72" y1="478" x2="640" y2="478" stroke="#FFDC00" stroke-width="1" opacity="0.3"/>
 
   <!-- Stats row -->
-  <!-- Stat 1 -->
-  <text x="72" y="510" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="32" font-weight="700" fill="#FFDC00">26s</text>
-  <text x="72" y="538" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="14" fill="#8BA4C8">Decision analysis</text>
+  <text x="72"  y="528" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="36" font-weight="700" fill="#FFDC00">26s</text>
+  <text x="72"  y="556" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8BA4C8">Decision analysis</text>
 
-  <!-- Stat 2 -->
-  <text x="230" y="510" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="32" font-weight="700" fill="#FFDC00">90</text>
-  <text x="230" y="538" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="14" fill="#8BA4C8">Day arc</text>
+  <text x="240" y="528" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="36" font-weight="700" fill="#FFDC00">90</text>
+  <text x="240" y="556" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8BA4C8">Day arc</text>
 
-  <!-- Stat 3 -->
-  <text x="350" y="510" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="32" font-weight="700" fill="#FFDC00">19</text>
-  <text x="350" y="538" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="14" fill="#8BA4C8">Clinical modalities</text>
+  <text x="380" y="528" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="36" font-weight="700" fill="#FFDC00">19</text>
+  <text x="380" y="556" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8BA4C8">Clinical modalities</text>
 
   <!-- URL badge -->
-  <rect x="72" y="572" width="180" height="36" rx="6"
-        fill="none" stroke="#FFDC00" stroke-width="1" opacity="0.4"/>
-  <text x="162" y="595" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="14" fill="#FFDC00" text-anchor="middle" letter-spacing="1">sentinelman.com</text>
+  <rect x="500" y="510" width="200" height="42" rx="6" fill="none" stroke="#FFDC00" stroke-width="1" opacity="0.45"/>
+  <text x="600" y="538" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="15" fill="#FFDC00" text-anchor="middle" letter-spacing="1.2">sentinelman.com</text>
 
-  <!-- Right &#8212; mock phone card -->
-  <rect x="780" y="72" width="348" height="486" rx="20"
-        fill="#0D0D1A" stroke="#FFDC00" stroke-width="1" opacity="1"
-        style="filter: drop-shadow(0 24px 48px rgba(0,0,0,0.5))"/>
-
-  <!-- Phone content -->
-  <text x="810" y="118" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="10" fill="#8BA4C8" letter-spacing="2">THU 08 MAY &#8212; 06:34 AEST</text>
-
-  <!-- Mode badge -->
-  <rect x="810" y="128" width="120" height="24" rx="3"
-        fill="none" stroke="#0074D9" stroke-width="1" opacity="0.5"/>
-  <rect x="810" y="128" width="120" height="24" rx="3"
-        fill="#0074D9" opacity="0.12"/>
-  <text x="870" y="144" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="10" fill="#3B9EFF" text-anchor="middle" letter-spacing="2">&#9654; COMMAND MODE</text>
-
-  <!-- Score -->
-  <text x="810" y="210" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="72" font-weight="700" fill="#FFFFFF">84</text>
-  <text x="810" y="235" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="10" fill="#8BA4C8" letter-spacing="2">READINESS SCORE</text>
-
-  <!-- Brief text -->
-  <text x="810" y="272" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="13" fill="#C2D6EF">Sleep debt: 8 min. HRV elevated.</text>
-  <text x="810" y="292" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="13" fill="#C2D6EF">Peak window: 06:34 &#8594; 12:00.</text>
-  <text x="810" y="312" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="13" fill="#C2D6EF">Three levers identified.</text>
-
-  <!-- Lever 1 -->
-  <rect x="810" y="330" width="290" height="38" rx="4"
-        fill="#FFFFFF" opacity="0.04"/>
-  <rect x="810" y="330" width="290" height="38" rx="4"
-        fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.08"/>
-  <text x="822" y="354" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="12" fill="#C2D6EF">Front-load decisions before 11am</text>
-  <text x="1088" y="354" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="10" fill="#FFDC00" text-anchor="end">&#8593; DECISION</text>
-
-  <!-- Lever 2 -->
-  <rect x="810" y="374" width="290" height="38" rx="4"
-        fill="#FFFFFF" opacity="0.04"/>
-  <rect x="810" y="374" width="290" height="38" rx="4"
-        fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.08"/>
-  <text x="822" y="398" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="12" fill="#C2D6EF">Physical output first</text>
-  <text x="1088" y="398" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="10" fill="#FFDC00" text-anchor="end">&#8593; CLARITY</text>
-
-  <!-- Lever 3 -->
-  <rect x="810" y="418" width="290" height="38" rx="4"
-        fill="#FFFFFF" opacity="0.04"/>
-  <rect x="810" y="418" width="290" height="38" rx="4"
-        fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.08"/>
-  <text x="822" y="442" font-family="'Rubik', 'Helvetica Neue', Arial, sans-serif"
-        font-size="12" fill="#C2D6EF">Contact M. &#8212; 21 days elapsed</text>
-  <text x="1088" y="442" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="10" fill="#FFDC00" text-anchor="end">&#9672; NETWORK</text>
-
-  <!-- Carry forward -->
-  <line x1="810" y1="470" x2="1100" y2="470"
-        stroke="#FFFFFF" stroke-width="1" opacity="0.06"/>
-  <text x="822" y="492" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="10" fill="#8BA4C8">&#9672; CARRY-FORWARD: Board deck &#8594; 1600</text>
-
-  <!-- Tagline strip at bottom -->
+  <!-- Bottom positioning strip -->
   <rect x="0" y="594" width="1200" height="36" fill="#FFDC00" opacity="0.06"/>
   <line x1="0" y1="594" x2="1200" y2="594" stroke="#FFDC00" stroke-width="1" opacity="0.2"/>
-  <text x="600" y="617" font-family="'JetBrains Mono', 'Courier New', monospace"
-        font-size="11" fill="#FFDC00" text-anchor="middle" letter-spacing="4" opacity="0.7">
-    PERFORMANCE INTELLIGENCE &#183; NOT WELLNESS &#183; NOT COACHING &#183; NOT A CHAT APP
-  </text>
+  <text x="600" y="617" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" fill="#FFDC00" text-anchor="middle" letter-spacing="4" opacity="0.75">PERFORMANCE INTELLIGENCE &#183; NOT WELLNESS &#183; NOT COACHING &#183; NOT A CHAT APP</text>
 </svg>
