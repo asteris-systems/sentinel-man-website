@@ -2,15 +2,50 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Sign in — SENTINEL MAN" description="Sign in to your Sentinel Man account.">
-  <div class="prose-wrap" style="text-align:center">
-    <div class="prose-eyebrow">SIGN IN</div>
-    <h1 class="prose-title">Authentication <strong>coming online.</strong></h1>
-    <div class="prose-meta" style="display:inline-block;margin:0 auto 32px;border:1px solid var(--border);padding:14px 22px;border-radius:8px">
-      <span>WEB APP LAUNCHING WITH iOS &amp; ANDROID</span>
-    </div>
-    <div class="prose">
-      <p style="text-align:center">The Sentinel Man web app is launching alongside iOS and Android. Begin your 8-day trial below to be notified the moment it's live.</p>
-      <p style="text-align:center;margin-top:32px"><a href="/#pricing" class="cta-btn" style="display:inline-flex">Begin your 8-day trial <span class="cta-arrow">→</span></a></p>
-    </div>
+  <div class="signin-wrap">
+    <div class="eyebrow" style="text-align:center">SIGN IN</div>
+    <h1 class="signin-title">Authentication <strong>coming online.</strong></h1>
+    <div class="signin-badge">WEB APP LAUNCHING WITH iOS &amp; ANDROID</div>
+    <p class="signin-lead">The Sentinel Man web app is launching alongside iOS and Android. Begin your 8-day trial below to be notified the moment it's live.</p>
+    <a href="/#pricing" class="cta-btn">Begin your 8-day trial <span class="cta-arrow">→</span></a>
   </div>
 </BaseLayout>
+
+<style>
+  .signin-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 100px 32px 140px;
+    text-align: center;
+  }
+  .signin-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 24px 0 32px;
+  }
+  .signin-title strong { font-weight: 600; color: var(--gold); }
+  .signin-badge {
+    display: inline-block;
+    border: 1px solid rgba(255, 220, 0, 0.4);
+    background: rgba(255, 220, 0, 0.05);
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--gold);
+    margin-bottom: 32px;
+  }
+  .signin-lead {
+    max-width: 540px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--secondary);
+  }
+  .signin-wrap .cta-btn { margin: 0 auto; }
+</style>
