@@ -337,7 +337,8 @@ nav.site-nav {
 }
 .tl-node {
   text-align: center;
-  padding-top: 36px;
+  padding-top: 56px;
+  position: relative;
 }
 .tl-dot {
   width: 28px;
@@ -345,9 +346,10 @@ nav.site-nav {
   border-radius: 50%;
   background: var(--navy);
   border: 2px solid var(--gold);
-  margin: 0 auto -50px;
-  position: relative;
-  top: -36px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
