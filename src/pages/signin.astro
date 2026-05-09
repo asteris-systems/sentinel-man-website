@@ -1,51 +1,21 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+// /signin on the marketing site redirects to the real auth flow on
+// the app subdomain. Sign-in does not happen on sentinelman.com —
+// only on app.sentinelman.com (where Clerk is wired in).
+//
+// Astro static-build emits this as a meta-refresh redirect since
+// there's no server runtime. Same end result for users.
 ---
-<BaseLayout title="Sign in — SENTINEL MAN" description="Sign in to your Sentinel Man account.">
-  <div class="signin-wrap">
-    <div class="eyebrow" style="text-align:center">SIGN IN</div>
-    <h1 class="signin-title">Authentication <strong>coming online.</strong></h1>
-    <div class="signin-badge">WEB APP LAUNCHING WITH iOS &amp; ANDROID</div>
-    <p class="signin-lead">The Sentinel Man web app is launching alongside iOS and Android. Begin your 7-day trial below to be notified the moment it's live.</p>
-    <a href="/#pricing" class="cta-btn" data-track="cta_click" data-track-location="signin" data-track-label="Begin your 7-day trial">Begin your 7-day trial <span class="cta-arrow">→</span></a>
-  </div>
-</BaseLayout>
-
-<style>
-  .signin-wrap {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 100px 32px 140px;
-    text-align: center;
-  }
-  .signin-title {
-    font-family: 'Rubik', sans-serif;
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 300;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    margin: 24px 0 32px;
-  }
-  .signin-title strong { font-weight: 600; color: var(--gold); }
-  .signin-badge {
-    display: inline-block;
-    border: 1px solid rgba(255, 220, 0, 0.4);
-    background: rgba(255, 220, 0, 0.05);
-    padding: 14px 26px;
-    border-radius: 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.16em;
-    color: var(--gold);
-    margin-bottom: 32px;
-  }
-  .signin-lead {
-    max-width: 540px;
-    margin: 0 auto 40px;
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--secondary);
-  }
-  .signin-wrap .cta-btn { margin: 0 auto; }
-</style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=https://app.sentinelman.com/sign-in" />
+    <link rel="canonical" href="https://app.sentinelman.com/sign-in" />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href="https://app.sentinelman.com/sign-in">app.sentinelman.com/sign-in</a>…</p>
+    <script>window.location.replace('https://app.sentinelman.com/sign-in');</script>
+  </body>
+</html>
