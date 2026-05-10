@@ -9,7 +9,7 @@ const engines = [
   {
     n: '02',
     title: 'DECISION ENGINE',
-    body: 'Five AI lanes analyse your decision in parallel — Reasoner, Contrarian, Context Enhancer, Predictor, Pre-mortem — then synthesise into a single SENTINEL assessment. Each call ships with a failure-mode forecast and a calibration disclosure showing exactly what data the AI was given. In 26 seconds.',
+    body: 'Five AI lanes analyse your decision in parallel — Reasoner, Contrarian, Context Enhancer, Predictor, Pre-mortem — then synthesise into a single SENTINEL assessment. The Contrarian runs on a different model architecture with no access to your principles or history; its job is to find the kill-shot independently. Cohort priors from 1,600 simulated decisions seed the council from Day 1. The council is not your echo chamber. In 26 seconds.',
     color: '#0074D9',
   },
   {
@@ -40,5 +40,9 @@ const engines = [
         <div class="engine-body">{e.body}</div>
       </div>
     ))}
+  </div>
+  <div class="trust-strip">
+    <div class="trust-eyebrow">THE ANTI-CHATGPT TRUST SIGNAL</div>
+    <div class="trust-body">Every assessment ships with a <strong>calibration disclosure</strong> — the exact inputs the council was reasoning from. Operator record counts. Cohort archetype matched. Lanes that ran. Data thin? You see it. Data deep? You see that too. Most AI gives you confident output and asks you to trust it. SENTINEL shows you when to push back.</div>
   </div>
 </section>

@@ -120,8 +120,21 @@ nav.site-nav {
   font-size: 16px;
   color: var(--body);
   line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 500px;
+}
+.hero-pillars {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.55;
   margin-bottom: 28px;
   max-width: 500px;
+  padding-left: 14px;
+  border-left: 2px solid var(--gold);
+}
+.hero-pillars strong {
+  color: var(--gold);
+  font-weight: 600;
 }
 .stats-row {
   display: flex;
@@ -314,6 +327,30 @@ nav.site-nav {
   font-size: 16px;
   color: var(--body);
   line-height: 1.6;
+}
+.trust-strip {
+  margin-top: 32px;
+  padding: 24px 28px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  background: #0D1F35;
+  border-radius: 8px;
+}
+.trust-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.trust-body {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.6;
+}
+.trust-body strong {
+  color: var(--gold);
+  font-weight: 600;
 }
 
 /* 90-DAY ARC TIMELINE */
