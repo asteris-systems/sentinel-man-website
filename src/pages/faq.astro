@@ -33,8 +33,28 @@ const faqs = [
         a: 'Under 90 seconds. Five inputs. No typing required unless you choose to add a carry-forward note. The check-in is deliberately minimal because a tool you do not use daily produces no intelligence at all.',
       },
       {
+        q: 'What is a weekly objective?',
+        a: 'One headline objective per Monday-week — what this seven-day window is about. The weekly objective is set on COCKPIT, persists for seven days, and is read into every daily brief that week as a frame above the daily primary objective. One call per week, not a list. The discipline is forcing one call.',
+      },
+      {
+        q: 'What does the system give me beyond Day 90?',
+        a: 'On the last day of every calendar quarter, THE SIGNAL fires — a 280–400 word digest of the 90 days you just lived: what crystallised, what is drifting, what the next quarter demands. At Day 365, the Annual Review fires once: the operator you were on Day 1, the operator you are now, what the record proves, what it warns, and the next year\'s call. Both are written from your record, not from a template.',
+      },
+      {
+        q: 'Are debriefs searchable?',
+        a: 'Yes. The DEBRIEF reader has clickable section anchors, a master/detail layout on desktop, and a search box that filters across all your debriefs with hit highlighting in the reader. Your weekly + quarterly + milestone debriefs become a referenceable record on yourself, not a one-time read.',
+      },
+      {
         q: 'What is the Decision Advisor?',
-        a: 'When you face a significant decision, you submit it. Four AI models analyse it in parallel — the Reasoner (your history and principles), the Contrarian (kill shots and worst case), the Context Enhancer (second-order effects), the Predictor (what you will actually do). 26 seconds later, a single synthesised assessment arrives. Four perspectives, already resolved.',
+        a: 'When you face a significant decision, you submit it. Five AI models analyse it in parallel — the Reasoner (your history and principles), the Contrarian (kill shots and worst case), the Context Enhancer (second-order effects), the Predictor (what you will actually do), and the Pre-mortem (the most likely 90-day failure mode + the early-warning signal that would tell you it is failing). 26 seconds later, a single synthesised assessment arrives. Five perspectives, already resolved, with a failure-mode forecast attached.',
+      },
+      {
+        q: 'What is the Pre-mortem lane?',
+        a: 'A failure-mode forecast tied to the specific decision. Three lines: the most likely way this decision fails over the next 90 days, the early-warning signal you could observe to catch it failing in time to course-correct, and one guardrail to attach before you commit. Grounded in your actual data — references your operating principles and recent decisions, not generic risk advice.',
+      },
+      {
+        q: 'Can I see what data the AI was given?',
+        a: 'Yes. Every assessment ships with a calibration disclosure — a collapsible card showing exactly what inputs the council was reasoning from. Operator record (active principles, recent decisions used, profile fields filled, current check-in present), cohort archetype matched, and which lanes ran with which models. Trust by disclosure, not by claim.',
       },
       {
         q: 'Will it tell me what to do?',
@@ -68,7 +88,7 @@ const faqs = [
     items: [
       {
         q: 'Why is the iOS price higher than the web price?',
-        a: 'Apple and Google take a 15–30% cut on in-app subscriptions. Subscribing through sentinelman.com via Stripe avoids that fee, so the web price is $19.99/mo or $199/yr. iOS and Android in-app pricing is $24.99/mo or $249/yr to offset the platform fees. You get the same product either way.',
+        a: 'Apple and Google take a 15–30% cut on in-app subscriptions. Subscribing through sentinelman.com via Stripe avoids that fee, so the web price is $24.99/mo or $249/yr. iOS and Android in-app pricing is $29.99/mo or $299/yr to offset the platform fees. You get the same product either way.',
       },
       {
         q: 'How does the free trial work?',
@@ -140,7 +160,8 @@ const faqSchema = {
   <FinalCTA
     heading="Still have a question?"
     headingStrong="Write to us."
-    sub="support@sentinelman.com — we respond within 48 hours AEST."
+    sub="support@sentinelman.com"
+    subLine2="We respond within 48 hours AEST."
     cta="Begin your 7-day trial →"
   />
 </BaseLayout>
@@ -165,7 +186,7 @@ const faqSchema = {
     list-style: none;
     padding: 22px 28px;
     font-family: 'Rubik', sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--text);
     display: flex;
@@ -187,7 +208,7 @@ const faqSchema = {
   }
   .faq-answer {
     padding: 0 28px 24px;
-    font-size: 15.5px;
+    font-size: 16.5px;
     line-height: 1.7;
     color: var(--secondary);
   }

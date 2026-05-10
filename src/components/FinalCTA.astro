@@ -3,14 +3,26 @@ interface Props {
   eyebrow?: string;
   heading?: string;
   headingStrong?: string;
+  /**
+   * First line of the sub-text. Keep short — `Seven days. No credit card.` etc.
+   */
   sub?: string;
+  /**
+   * Optional second line — renders below `sub` with a forced break so
+   * trailing fragments like "Day 1." don't orphan onto their own line.
+   */
+  subLine2?: string;
   cta?: string;
 }
 const {
   eyebrow,
   heading = 'Stop guessing.',
   headingStrong = 'Start operating.',
-  sub = 'Seven days. No credit card. The system does the rest.',
+  sub = 'Seven days. No credit card.',
+  // Opt-in only — pass explicitly when you want a second line. No default
+  // so pages with their own context (FAQ, arc) don't get a stray
+  // "The system does the rest" line that doesn't match.
+  subLine2,
   cta = 'Begin assessment →',
 } = Astro.props;
 ---
@@ -18,7 +30,10 @@ const {
   <div class="final-cta-inner">
     {eyebrow && <div class="eyebrow">{eyebrow}</div>}
     <h2>{heading}<br /><strong>{headingStrong}</strong></h2>
-    <p>{sub}</p>
+    <p>
+      {sub}
+      {subLine2 && <><br />{subLine2}</>}
+    </p>
     <a href="/#pricing" class="cta-btn" data-track="cta_click" data-track-location="final_cta" data-track-label={cta}>{cta}</a>
   </div>
 </section>

@@ -6,9 +6,9 @@ import FinalCTA from '../components/FinalCTA.astro';
   title="How It Works — SENTINEL MAN"
   description="Four engines. One intelligence system. The Brief Engine, Decision Engine, Pattern Engine, and Debrief Engine — each with a distinct job, all drawing from the same operational data."
   ogTitle="How SENTINEL MAN Works — Four Engines, One Voice"
-  ogDescription="Four AI engines working from your daily data: morning brief, 4-lane decision analysis, pattern detection, and weekly debrief. See exactly how the system operates."
+  ogDescription="Four AI engines working from your daily data: morning brief, 5-lane decision analysis with failure-mode forecast, pattern detection, weekly debrief. See exactly how the system operates."
   twitterTitle="How SENTINEL MAN Works — Four Engines, One Voice"
-  twitterDescription="Four AI engines working from your daily data. Morning brief, 4-lane decision analysis, pattern detection, weekly debrief. See how the system operates."
+  twitterDescription="Four AI engines working from your daily data. Morning brief, 5-lane decision analysis with failure-mode forecast, pattern detection, weekly debrief."
 >
   <div class="content-wrap">
     <div class="content-hero">
@@ -37,6 +37,7 @@ import FinalCTA from '../components/FinalCTA.astro';
           <p>Every morning, before you open your inbox, SENTINEL MAN produces your operational brief. Not a generic motivational message. A data-driven intelligence report, specific to your state on that specific day.</p>
           <p>The brief begins with your mode assignment — <strong>COMMAND</strong>, <strong>RECON</strong>, or <strong>STANDBY</strong> — determined by the system from your check-in data and recent trend. Your mode sets the tone for everything that follows. A COMMAND mode brief is aggressive and directive. A RECON brief is observational, diagnostic. STANDBY is minimal — the system knows today is not the day to push hard.</p>
           <p>Below the mode: your Readiness Score (0–100), your decision quality window (the hours your data says your judgment is sharpest), and three operational levers — specific, actionable moves for that day. No generic advice. Each lever is derived from the pattern the system has built about you.</p>
+          <p>Above the daily call sits your <strong>weekly objective</strong> — one headline objective per Monday-week that you set on COCKPIT. SENTINEL reads it back to you every morning until it is done or you mark it breached. One call per week. Not a list. The discipline is forcing one call.</p>
         </div>
         <div class="phone-frame" style="margin:0 auto;width:280px">
           <div class="phone-notch"><div class="notch-bar"></div></div>
@@ -83,11 +84,13 @@ import FinalCTA from '../components/FinalCTA.astro';
       <h2>The <strong>Decision Engine.</strong></h2>
       <div class="split">
         <div class="split-text">
-          <p>When you face a significant decision, you submit it to the Decision Engine. Four AI models analyse it in parallel — each with a different mandate. Within 26 seconds, a synthesised assessment arrives. One voice. Four perspectives already resolved.</p>
+          <p>When you face a significant decision, you submit it to the Decision Engine. Five AI models analyse it in parallel — each with a different mandate. Within 26 seconds, a synthesised assessment arrives. One voice. Five perspectives already resolved, with a failure-mode forecast attached.</p>
           <p><strong>The Reasoner</strong> — checks the decision against your history and your Operating Principles. Has this pattern appeared before? What did your data look like on days you made similar choices?</p>
           <p><strong>The Contrarian</strong> — attacks the obvious choice. What are the specific kill shots? What is the worst-case outcome? What are you not seeing because you are inside the decision?</p>
           <p><strong>The Context Enhancer</strong> — finds the variables you are not considering. Second and third-order consequences. Relational ripples. What happens to the people adjacent to this decision?</p>
           <p><strong>The Predictor</strong> — estimates what you will actually do. Based on your behaviour patterns, are you genuinely evaluating this — or have you already decided and are seeking validation?</p>
+          <p><strong>The Pre-mortem</strong> — forecasts the most likely 90-day failure mode for this specific decision and names the early-warning signal that would tell you it's failing in time to course-correct, plus the one guardrail worth attaching before you commit.</p>
+          <p>Every assessment ships with a <strong>calibration disclosure</strong>: a collapsible card showing exactly what data the council was reasoning from — your operator record counts, the cohort archetype matched, which lanes ran with which models. Trust by disclosure, not by claim.</p>
         </div>
         <div class="mock-card">
           <div class="mock-label">DECISION ASSESSMENT — 26 SECONDS</div>
@@ -95,6 +98,7 @@ import FinalCTA from '../components/FinalCTA.astro';
           <div class="mock-row red"><div class="mock-lane">CONTRARIAN</div><div class="mock-body">$180K with no trial period. If this fails, the referring client absorbs reputational damage. You are being pressured by your own calendar.</div></div>
           <div class="mock-row blue"><div class="mock-lane">CONTEXT</div><div class="mock-body">Your best client is the referral source. A failure here doesn't only affect the contract — it implicates that relationship.</div></div>
           <div class="mock-row purple"><div class="mock-lane">PREDICTOR</div><div class="mock-body">You are seeking permission for an exception you have already committed to internally — not genuinely deciding.</div></div>
+          <div class="mock-row" style="border-left:2px solid var(--gold)"><div class="mock-lane">PRE-MORTEM</div><div class="mock-body">Most likely failure: trial structure waived, scope creep by Week 3.<br />Early warning: client extending requirements before Week 2 deliverable lands.<br />Guardrail: written scope cap before signature, revisit only with formal change order.</div></div>
           <div class="mock-synthesis"><div class="mock-lane">◈ SOVEREIGNTY CHECK</div><div class="mock-body">If this offer arrived with a 60-day start and standard trial structure — would you take it? That question isolates the opportunity from the pressure.</div></div>
         </div>
       </div>
@@ -119,13 +123,14 @@ import FinalCTA from '../components/FinalCTA.astro';
     </section>
 
     <section class="content-section">
-      <div class="eyebrow">ENGINE 04 — WEEKLY</div>
+      <div class="eyebrow">ENGINE 04 — WEEKLY · QUARTERLY · ANNUAL</div>
       <h2>The <strong>Debrief Engine.</strong></h2>
       <div class="split">
         <div class="split-text">
           <p>Every Sunday evening, the Debrief Engine synthesises your week. Not a mood summary. A performance review — the kind a serious athlete would review between training sessions.</p>
           <p>The debrief covers what changed, what degraded, what improved, what your decision quality looked like, and which Operating Principle was tested during the week. It closes with your primary objective for the next cycle — a single actionable focus that carries forward automatically to Monday's brief.</p>
-          <p>By Week 12, your DEBRIEF tab is twelve weeks of operational history. Re-readable. The man who reads Week 3 at Week 12 and sees the same limiting variable is reading his own pattern — not a system report. That is what SENTINEL MAN is designed to produce.</p>
+          <p>The arc continues beyond the week. On the last day of every calendar quarter, <strong>THE SIGNAL</strong> fires — a 280–400 word digest of what crystallised, what is drifting, and what the next quarter demands. At Day 365, the <strong>Annual Review</strong> closes the year-long arc with a five-section verdict on the operator you have become.</p>
+          <p>The DEBRIEF tab is searchable. Every brief — weekly, milestone, quarterly, annual — has clickable section anchors and a master/detail reader on desktop. Search across the full archive with hit highlighting. By Week 12 your debriefs are an intelligence record on yourself. The reader is built to treat them that way.</p>
         </div>
         <div class="mock-card">
           <div class="mock-label">WEEKLY DEBRIEF — WEEK 7</div>
@@ -160,7 +165,7 @@ import FinalCTA from '../components/FinalCTA.astro';
           <div class="compare-head">SENTINEL MAN</div>
           <ul>
             <li>Your personal baseline builds from Day 1. Every score is yours.</li>
-            <li>Four AI lanes analyse every decision — including the contrarian kill shots</li>
+            <li>Five AI lanes analyse every decision — including the contrarian kill shots and a pre-mortem failure-mode forecast</li>
             <li>Pattern intelligence that accumulates across 90 days and beyond</li>
             <li>Man-sovereign. You buy it. Nobody at HR knows. Your data.</li>
             <li>Performance language — the system speaks the way you think</li>
@@ -174,7 +179,8 @@ import FinalCTA from '../components/FinalCTA.astro';
   <FinalCTA
     heading="See it working"
     headingStrong="on your data."
-    sub="Seven days. No credit card. The system starts building from Day 1."
+    sub="Seven days. No credit card."
+    subLine2="The system starts building from Day 1."
     cta="Begin your 7-day trial →"
   />
 </BaseLayout>

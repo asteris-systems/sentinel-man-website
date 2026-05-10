@@ -37,7 +37,7 @@ nav.site-nav {
 }
 .nav-wordmark {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.22em;
   color: var(--gold);
   font-weight: 500;
@@ -51,7 +51,7 @@ nav.site-nav {
 }
 .nav-link {
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   color: var(--body);
   text-decoration: none;
@@ -117,7 +117,7 @@ nav.site-nav {
 }
 .hero h1 strong { font-weight: 600; color: var(--gold); }
 .hero-sub {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--body);
   line-height: 1.6;
   margin-bottom: 28px;
@@ -160,7 +160,7 @@ nav.site-nav {
   background: var(--gold);
   color: var(--navy);
   font-family: 'Rubik', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   padding: 14px 28px;
   border-radius: 6px;
@@ -207,7 +207,7 @@ nav.site-nav {
 .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
 .p-stat { background: #0D1F35; border-radius: 8px; padding: 10px 14px; }
 .p-stat-lbl { font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: 0.1em; color: #8BA4C8; margin-bottom: 4px; text-transform: uppercase; }
-.p-stat-val { font-family: 'JetBrains Mono', monospace; font-size: 17px; color: #D4E2F4; }
+.p-stat-val { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #D4E2F4; }
 .p-brief { font-size: 12px; color: #D4E2F4; line-height: 1.6; margin-bottom: 14px; font-family: 'Rubik', sans-serif; }
 .p-lever { display: flex; gap: 7px; margin-bottom: 7px; align-items: flex-start; }
 .p-lm { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--blue); flex-shrink: 0; }
@@ -229,7 +229,7 @@ nav.site-nav {
 .strip-line { flex: 1; height: 1px; background: var(--border); }
 .strip-text {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.22em;
   color: var(--secondary);
@@ -270,7 +270,7 @@ nav.site-nav {
 .section-sub {
   max-width: 640px;
   margin: 24px auto 0;
-  font-size: 16px;
+  font-size: 17px;
   color: var(--body);
   line-height: 1.65;
 }
@@ -305,13 +305,13 @@ nav.site-nav {
 }
 .engine-title {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.14em;
   color: var(--text);
   margin-bottom: 14px;
 }
 .engine-body {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--body);
   line-height: 1.6;
 }
@@ -334,12 +334,18 @@ nav.site-nav {
   grid-template-columns: repeat(6, 1fr);
   gap: 0;
   position: relative;
+  row-gap: 48px;
 }
 .tl-node {
   text-align: center;
   padding-top: 56px;
   position: relative;
 }
+/* Post-90 nodes (QUARTERLY + DAY 365) live in row 2 — center them
+   under the 6-col arc so the second row reads as an extension, not
+   an orphan. */
+.tl-node:nth-child(7) { grid-column: 3; }
+.tl-node:nth-child(8) { grid-column: 4; }
 .tl-dot {
   width: 28px;
   height: 28px;
@@ -369,7 +375,7 @@ nav.site-nav {
 }
 .tl-title {
   font-family: 'Rubik', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text);
   font-weight: 500;
   margin-bottom: 8px;
@@ -392,7 +398,7 @@ nav.site-nav {
   padding-left: 20px;
 }
 .proof-quote {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--secondary);
   line-height: 1.6;
   font-style: italic;
@@ -452,7 +458,7 @@ nav.site-nav {
 }
 .price-yearly {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--body);
   text-align: center;
 }
@@ -471,12 +477,12 @@ nav.site-nav {
 }
 .feat-check {
   color: var(--gold);
-  font-size: 16px;
+  font-size: 17px;
   flex-shrink: 0;
   line-height: 1.3;
 }
 .feat-text {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--secondary);
 }
 .price-cta {
@@ -485,7 +491,7 @@ nav.site-nav {
   background: var(--gold);
   color: var(--navy);
   font-family: 'Rubik', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   padding: 16px;
   border-radius: 8px;
@@ -496,7 +502,7 @@ nav.site-nav {
 .price-note {
   text-align: center;
   margin-top: 12px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--body);
 }
 
@@ -524,14 +530,14 @@ nav.site-nav {
 }
 .final-cta h2 strong { font-weight: 600; color: var(--gold); }
 .final-cta p {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--body);
   line-height: 1.6;
   margin: 0 auto 40px;
   max-width: 480px;
 }
 .final-cta .cta-btn {
-  font-size: 16px;
+  font-size: 17px;
   padding: 18px 40px;
 }
 
@@ -560,7 +566,7 @@ footer.site-footer {
 .footer-brand:hover { opacity: 0.85; }
 .footer-mark {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.22em;
   color: var(--gold);
   font-weight: 500;
@@ -594,7 +600,7 @@ footer.site-footer {
 }
 .footer-link {
   font-family: 'Rubik', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--body);
   text-decoration: none;
   transition: color 0.2s;
@@ -609,7 +615,7 @@ footer.site-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--secondary);
 }
 .footer-bottom .mono {
@@ -653,7 +659,7 @@ footer.site-footer {
 .prose-meta span { display: inline-block; margin-right: 24px; }
 .prose {
   color: var(--secondary);
-  font-size: 15.5px;
+  font-size: 16.5px;
   line-height: 1.75;
 }
 .prose h2 {
@@ -668,7 +674,7 @@ footer.site-footer {
 .prose h2:first-child { padding-top: 0; border-top: none; margin-top: 0; }
 .prose h3 {
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   color: var(--gold);
   margin: 32px 0 10px;
@@ -692,7 +698,7 @@ footer.site-footer {
   width: 100%;
   border-collapse: collapse;
   margin: 24px 0;
-  font-size: 14px;
+  font-size: 15px;
 }
 .prose th, .prose td {
   text-align: left;
@@ -711,7 +717,7 @@ footer.site-footer {
 .prose td { color: var(--secondary); }
 .prose code {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gold);
   background: rgba(10, 48, 96, 0.4);
   padding: 1px 6px;
@@ -774,7 +780,7 @@ footer.site-footer {
 .content-hero .lead {
   max-width: 720px;
   margin: 0 auto;
-  font-size: 17px;
+  font-size: 18px;
   color: var(--secondary);
   line-height: 1.7;
 }
@@ -803,7 +809,7 @@ footer.site-footer {
   align-items: start;
 }
 .split-text {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--secondary);
   line-height: 1.75;
 }
@@ -892,7 +898,7 @@ footer.site-footer {
   gap: 12px;
   align-items: flex-start;
   padding: 10px 0;
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.55;
   color: var(--secondary);
 }
@@ -924,7 +930,7 @@ footer.site-footer {
   margin-bottom: 10px;
 }
 .principle-body {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   color: var(--secondary);
 }
@@ -969,7 +975,7 @@ footer.site-footer {
   margin-bottom: 12px;
 }
 .founder-bio {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.65;
   color: var(--secondary);
 }
@@ -1016,7 +1022,7 @@ footer.site-footer {
 }
 .vstage-day {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   letter-spacing: 0.12em;
   margin-bottom: 14px;
@@ -1030,14 +1036,14 @@ footer.site-footer {
   line-height: 1.3;
 }
 .vstage-body {
-  font-size: 15.5px;
+  font-size: 16.5px;
   line-height: 1.7;
   color: var(--secondary);
 }
 .vstage-body p { margin-bottom: 14px; }
 .vstage-body p strong { color: var(--text); font-weight: 500; }
 .vstage-detail {
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--body);
   line-height: 1.65;
   margin-top: 12px;
@@ -1048,7 +1054,7 @@ footer.site-footer {
   width: 100%;
   border-collapse: collapse;
   margin-top: 16px;
-  font-size: 14.5px;
+  font-size: 15.5px;
 }
 .day-table th {
   font-family: 'JetBrains Mono', monospace;
@@ -1071,7 +1077,7 @@ footer.site-footer {
 .day-table .day-num {
   font-family: 'JetBrains Mono', monospace;
   color: var(--gold);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.1em;
   width: 70px;
   white-space: nowrap;
@@ -1107,7 +1113,7 @@ footer.site-footer {
 }
 .mini-engine .name {
   font-family: 'Rubik', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text);
   font-weight: 500;
 }
@@ -1126,7 +1132,7 @@ footer.site-footer {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 14px 18px;
-  font-size: 14px;
+  font-size: 15px;
 }
 .tech-label {
   font-family: 'JetBrains Mono', monospace;
@@ -1192,7 +1198,7 @@ footer.site-footer {
   margin-bottom: 12px;
 }
 .contact-card p {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.6;
   color: var(--secondary);
   margin-bottom: 0;
@@ -1211,7 +1217,7 @@ footer.site-footer {
   border-bottom: 1px solid var(--border);
   padding: 8px 0;
   margin: 0 !important;
-  font-size: 14px;
+  font-size: 15px;
 }
 .crisis-list li strong { color: var(--text); }
 .crisis-list li span { font-family: 'JetBrains Mono', monospace; color: var(--gold); }

@@ -16,7 +16,7 @@ const schema = [
     name: 'SENTINEL MAN',
     url: 'https://sentinelman.com',
     logo: 'https://sentinelman.com/logo.png',
-    description: 'Performance intelligence system for high-stakes men. Daily command brief, four-lane decision analysis, 90-day operational record.',
+    description: 'Performance intelligence system for high-stakes men. Daily command brief, five-lane decision analysis with failure-mode forecast, 90-day operational record.',
     foundingDate: '2026',
     founder: {
       '@type': 'Person',
@@ -46,7 +46,7 @@ const schema = [
     '@type': 'Product',
     '@id': 'https://sentinelman.com/#product',
     name: 'SENTINEL MAN',
-    description: 'AI performance intelligence system. Daily command brief, four-lane decision analysis, pattern detection engine, weekly debrief, and 90-day transformation arc.',
+    description: 'AI performance intelligence system. Daily command brief, five-lane decision analysis with failure-mode forecast, pattern detection engine, weekly debrief, and 90-day transformation arc.',
     brand: { '@type': 'Brand', name: 'SENTINEL MAN' },
     image: 'https://sentinelman.com/og-image.png',
     url: 'https://sentinelman.com/',
@@ -54,7 +54,7 @@ const schema = [
       {
         '@type': 'Offer',
         name: 'Monthly subscription (web)',
-        price: '19.99',
+        price: '24.99',
         priceCurrency: 'AUD',
         url: 'https://sentinelman.com/#pricing',
         availability: 'https://schema.org/InStock',
@@ -63,7 +63,7 @@ const schema = [
       {
         '@type': 'Offer',
         name: 'Annual subscription (web)',
-        price: '199.00',
+        price: '249.00',
         priceCurrency: 'AUD',
         url: 'https://sentinelman.com/#pricing',
         availability: 'https://schema.org/InStock',
@@ -84,9 +84,9 @@ const schema = [
 ---
 <BaseLayout
   title="SENTINEL MAN — Performance Intelligence for Men"
-  description="Not a wellness app. A performance intelligence system. Daily brief, 4-lane decision analysis, pattern detection, 90-day transformation arc. Built for men who operate at a high level."
-  ogDescription="Not a wellness app. A performance intelligence system. Daily brief, 4-lane decision analysis, pattern detection, 90-day transformation arc. Start your 7-day free trial."
-  twitterDescription="Not a wellness app. A performance intelligence system. Daily brief, 4-lane decision analysis, 90-day arc. 7-day free trial — no credit card."
+  description="Not a wellness app. A performance intelligence system. Daily brief, 5-lane decision analysis, pattern detection, 90-day transformation arc. Built for men who operate at a high level."
+  ogDescription="Not a wellness app. A performance intelligence system. Daily brief, 5-lane decision analysis, pattern detection, 90-day transformation arc. Start your 7-day free trial."
+  twitterDescription="Not a wellness app. A performance intelligence system. Daily brief, 5-lane decision analysis, 90-day arc. 7-day free trial — no credit card."
 >
   <SchemaJsonLd schema={schema} />
   <Hero />
@@ -94,5 +94,8 @@ const schema = [
   <Arc />
   <Proof />
   <Pricing />
-  <FinalCTA />
+  <FinalCTA
+    sub="Seven days. No credit card."
+    subLine2="The system does the rest."
+  />
 </BaseLayout>
