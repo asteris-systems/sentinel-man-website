@@ -84,25 +84,8 @@ import FinalCTA from '../components/FinalCTA.astro';
       <h2>The <strong>Decision Engine.</strong></h2>
       <div class="split">
         <div class="split-text">
-          <p>When you face a significant decision, you submit it to the Decision Engine. Five AI models analyse it in parallel — each with a different mandate. Within 26 seconds, a synthesised assessment arrives. One voice. Five perspectives already resolved, with a failure-mode forecast attached.</p>
-          <p><strong>The Reasoner</strong> — checks the decision against your history and your Operating Principles. Has this pattern appeared before? What did your data look like on days you made similar choices?</p>
-          <p><strong>The Contrarian</strong> — attacks the obvious choice. What are the specific kill shots? What is the worst-case outcome? What are you not seeing because you are inside the decision?</p>
-          <p><strong>The Context Enhancer</strong> — finds the variables you are not considering. Second and third-order consequences. Relational ripples. What happens to the people adjacent to this decision?</p>
-          <p><strong>The Predictor</strong> — estimates what you will actually do. Based on your behaviour patterns, are you genuinely evaluating this — or have you already decided and are seeking validation?</p>
-          <p><strong>The Pre-mortem</strong> — forecasts the most likely 90-day failure mode for this specific decision and names the early-warning signal that would tell you it's failing in time to course-correct, plus the one guardrail worth attaching before you commit.</p>
-          <p>Every assessment ships with a <strong>calibration disclosure</strong>: a collapsible card showing exactly what data the council was reasoning from — your operator record counts, the cohort archetype matched, which lanes ran with which models. Trust by disclosure, not by claim.</p>
-          <p>Every assessment ends with a <strong>SOVEREIGNTY CHECK</strong> — a question, not an answer. The council informs. You decide. Always. A 42-year-old founder with 15 years of building his own judgment doesn't want a system that tells him what to do; he wants one that sharpens his own call.</p>
-          <p>The Decision Engine is capped at <strong>7 calls per day</strong>. The cap is not a limitation — it's a discipline mechanic. You decide which decisions deserve the full council. That selection process — naming what's actually significant before submitting — is itself part of the product.</p>
-          <p>The council is not your echo chamber. From Day 1, before any personal pattern data exists, the lanes draw from <strong>1,600 simulated decisions across 8 archetypes</strong> matched to your profile. The Contrarian runs on a different model architecture with no access to your principles. External reference is built in.</p>
-          <p>Every call you log outcomes against makes the next call sharper. After 50 logged outcomes the Reasoner knows your hit rate by decision type (people decisions: 58% right call; financial: 81%), which conditions correlate with your best and worst calls, and which lane was most predictive for your specific patterns. <strong>The council gets smarter at your flavour of decisions over time.</strong> That's compounding intelligence — the most important long-term value the product produces.</p>
-          <p>Decision Engine ships with three modes:</p>
-          <p style="padding-left:14px;border-left:2px solid var(--gold)"><strong>COUNCIL</strong> — full five-lane assessment described above. 7 per day. For decisions where 26 seconds of analysis earns its keep.</p>
-          <p style="padding-left:14px;border-left:2px solid var(--blue)"><strong>FAST</strong> — sub-5-second Haiku response. One risk flag, one question. 10 per day. For live negotiations, board meetings in progress, deals closing on the phone — when council time is too long.</p>
-          <p style="padding-left:14px;border-left:2px solid var(--muted)"><strong>REPLAY</strong> — submit a past decision plus what actually happened. The council retroactively assesses what it would have said at the time. 5 per day. Best for decisions you got wrong — empirical proof that gut + council beats gut alone.</p>
-          <p>Every council assessment also surfaces:</p>
-          <p style="padding-left:14px"><strong>Black-swan tail risks</strong> from the Pre-mortem lane — 1–2 low-probability high-impact scenarios with the early signal that would tell you they're activating.</p>
-          <p style="padding-left:14px"><strong>Multi-OP conflict resolution</strong> — when two of your active principles fight each other on a decision (e.g. <em>"move fast"</em> vs <em>"72-hour buffer"</em>), the system names the tension and hands the resolution back to you. The most valuable decision-coaching the system produces.</p>
-          <p style="padding-left:14px"><strong>Alliance Risk Forecast</strong> — when the decision text mentions a contact in your network, the Context Enhancer adds a probability estimate of relational damage over the next 90 days, with the specific dynamic named.</p>
+          <p class="lead">Three modes. <strong>COUNCIL</strong> — five AI lanes synthesised in 26 seconds. <strong>FAST</strong> — sub-5-second risk flag for live negotiations. <strong>REPLAY</strong> — past decision retroactively assessed against the data that was available at the time.</p>
+          <p>Every council assessment ships with calibration disclosure, multi-OP conflict surfacing, black-swan tail risks, and alliance-risk forecasting when the decision involves a contact in your network. The council ends with a <strong>SOVEREIGNTY CHECK</strong> — a question, not an answer.</p>
         </div>
         <div class="mock-card">
           <div class="mock-label">DECISION ASSESSMENT — 26 SECONDS</div>
@@ -112,6 +95,42 @@ import FinalCTA from '../components/FinalCTA.astro';
           <div class="mock-row purple"><div class="mock-lane">PREDICTOR</div><div class="mock-body">You are seeking permission for an exception you have already committed to internally — not genuinely deciding.</div></div>
           <div class="mock-row" style="border-left:2px solid var(--gold)"><div class="mock-lane">PRE-MORTEM</div><div class="mock-body">Most likely failure: trial structure waived, scope creep by Week 3.<br />Early warning: client extending requirements before Week 2 deliverable lands.<br />Guardrail: written scope cap before signature, revisit only with formal change order.</div></div>
           <div class="mock-synthesis"><div class="mock-lane">◈ SOVEREIGNTY CHECK</div><div class="mock-body">If this offer arrived with a 60-day start and standard trial structure — would you take it? That question isolates the opportunity from the pressure.</div></div>
+        </div>
+      </div>
+
+      <div class="deep-dive">
+        <div class="eyebrow" style="margin-bottom:18px">DEEP DIVE — THE DECISION ENGINE IN FULL</div>
+        <div class="deep-grid">
+          <div class="deep-block">
+            <h4>The five lanes</h4>
+            <p><strong>Reasoner</strong> — checks the decision against your history and your Operating Principles. Has this pattern appeared before? What did your data look like on days you made similar choices?</p>
+            <p><strong>Contrarian</strong> — attacks the obvious choice. Specific kill shots. Worst-case outcome. What you're not seeing because you're inside the decision.</p>
+            <p><strong>Context Enhancer</strong> — second and third-order consequences. Relational ripples. People adjacent to the decision who aren't in the room.</p>
+            <p><strong>Predictor</strong> — what you'll actually do. Genuinely evaluating, or seeking validation for a call you've already made?</p>
+            <p><strong>Pre-mortem</strong> — most likely 90-day failure mode + the early-warning signal that would tell you it's failing in time + one guardrail worth attaching before you commit.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>The three modes</h4>
+            <p><strong>COUNCIL</strong> — full five-lane assessment. 7 per day. For decisions where 26 seconds of analysis earns its keep.</p>
+            <p><strong>FAST</strong> — sub-5-second Haiku response. One risk flag, one question. 10 per day. For live negotiations, board meetings in progress, deals closing on the phone.</p>
+            <p><strong>REPLAY</strong> — submit a past decision plus what actually happened. The council retroactively assesses what it would have said at the time. 5 per day. Empirical proof that gut + council beats gut alone — using your own history.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>What every assessment surfaces</h4>
+            <p><strong>Calibration disclosure</strong> — a collapsible card showing exactly what data the council was reasoning from. Operator record counts, cohort archetype matched, lanes that ran. Trust by disclosure, not by claim.</p>
+            <p><strong>Multi-OP conflict resolution</strong> — when two of your active principles fight each other (e.g. <em>"move fast"</em> vs <em>"72-hour buffer"</em>), the system names the tension and hands the resolution back to you.</p>
+            <p><strong>Alliance Risk Forecast</strong> — when the decision text mentions a contact in your network, an estimate of relational damage probability over the next 90 days, with the specific dynamic named.</p>
+            <p><strong>Black-swan tail risks</strong> — 1–2 low-probability high-impact scenarios with the early signal that would tell you they're activating.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>Why the cap is the feature</h4>
+            <p>The Decision Engine is capped at <strong>7 council calls per day</strong> (FAST and REPLAY have separate quotas). The cap forces selection — you decide which decisions deserve the full council. That selection discipline is itself part of the product.</p>
+            <p>The council is not your echo chamber. From Day 1, before any personal pattern data exists, the lanes draw from <strong>1,600 simulated decisions across 8 archetypes</strong> matched to your profile. The Contrarian runs on a different model architecture with no access to your principles. External reference is built in.</p>
+            <p>Every call you log outcomes against makes the next call sharper. After 50 logged outcomes the Reasoner knows your hit rate by decision type, which conditions correlate with your best and worst calls, and which lane was most predictive. <strong>Compounding intelligence over time.</strong></p>
+          </div>
         </div>
       </div>
     </section>
@@ -127,13 +146,37 @@ import FinalCTA from '../components/FinalCTA.astro';
           <div class="mock-row" style="border-left:2px solid var(--muted)"><div class="mock-lane" style="color:var(--muted)">NETWORK-CREATIVITY LINK</div><div class="mock-body">Strong social contact weeks correlate with higher clarity scores 2 days later.<br /><span style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em">CONFIDENCE: EMERGING · 5 DATA POINTS</span></div></div>
         </div>
         <div class="split-text">
-          <p>Most tools show you how you felt today. SENTINEL MAN builds a model of how you operate over time — detecting the correlations that repeat in your data before you are consciously aware of them.</p>
-          <p>The Pattern Engine runs two scans. A daily light scan checks for emerging signals — possible correlations in your most recent data. It never surfaces a pattern until the evidence threshold is met. A weekly deep scan runs a full analysis across your history, confirming patterns, updating confidence scores, and retiring patterns that no longer hold.</p>
-          <p>The patterns that matter most are the ones that reveal your <strong>decision conditions</strong> — the physiological and situational states that predict your best and worst calls. "Decision quality drops 31% when sleep debt exceeds 45 minutes and physical load is high." That is not a population statistic. That is your data.</p>
-          <p>The Pattern Engine also produces three operator-facing outputs you can act on directly:</p>
-          <p style="padding-left:14px"><strong>Cohort Percentile</strong> — your decision-quality and readiness benchmarked against the synthetic operator cohort matched to your archetype (founder under cash stress, executive in transition, late-career professional, etc.). Percentile rank, mode-mix comparison, plus one top-decile gap tactic. Activates with 10+ rated decisions or 14+ daily logs.</p>
-          <p style="padding-left:14px"><strong>Network Activation</strong> — when your contacts list shows overdue people, SENTINEL generates 1–3 short outreach drafts prioritised by leverage to your weekly objective, with a recommended channel. Operator-voice, ready to copy-edit-send. 3 generations per day.</p>
-          <p style="padding-left:14px"><strong>Dynamic Principle Refactoring</strong> — every 7 days at most, SENTINEL reads your decision outcomes and proposes ≤3 changes to your Operating Principles (additions, edits, retirements). Each cites specific decisions as evidence. You accept what fits. Reject what doesn't. The system never edits your principles for you.</p>
+          <p class="lead">Most tools show you how you felt today. SENTINEL MAN builds a model of how you operate over time — detecting the correlations that repeat in your data before you're consciously aware of them.</p>
+          <p>Two scans (daily light + weekly deep), three operator-facing outputs (Cohort Percentile, Network Activation, Dynamic Principle Refactoring). All grounded in the patterns the system has confirmed in your data — never population averages.</p>
+        </div>
+      </div>
+
+      <div class="deep-dive">
+        <div class="eyebrow" style="margin-bottom:18px">DEEP DIVE — THE PATTERN ENGINE IN FULL</div>
+        <div class="deep-grid">
+          <div class="deep-block">
+            <h4>How patterns surface</h4>
+            <p>The Pattern Engine runs two scans. A daily light scan checks for emerging signals — possible correlations in your most recent data. It never surfaces a pattern until the evidence threshold is met. A weekly deep scan runs a full analysis across your history, confirming patterns, updating confidence scores, and retiring patterns that no longer hold.</p>
+            <p>The patterns that matter most reveal your <strong>decision conditions</strong> — the physiological and situational states that predict your best and worst calls. <em>"Decision quality drops 31% when sleep debt exceeds 45 minutes and physical load is high."</em> That's not a population statistic. That's your data.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>Cohort Percentile</h4>
+            <p>Your decision-quality and readiness benchmarked against the synthetic operator cohort matched to your archetype (founder under cash stress, executive in transition, late-career professional, etc.). Percentile rank, mode-mix comparison, plus one top-decile gap tactic.</p>
+            <p>Activates with 10+ rated decisions or 14+ daily logs in the last 90 days. Solves the solo-operator's lack of external calibration without exposing personal data to peers.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>Network Activation</h4>
+            <p>When your contacts list shows overdue people, SENTINEL generates 1–3 short outreach drafts prioritised by leverage to your weekly objective, with a recommended channel (text / email / DM / call). Operator-voice, ready to copy-edit-send.</p>
+            <p>3 generations per day. Reframes the network as a tactical asset for the week, not a guilt list.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>Dynamic Principle Refactoring</h4>
+            <p>Every 7 days at most, SENTINEL reads your decision outcomes + principle adherence + active patterns and proposes ≤3 changes to your Operating Principles (additions, edits, retirements). Each cites specific decisions as evidence.</p>
+            <p>You accept what fits. Reject what doesn't. <strong>The system never edits your principles for you.</strong> The accumulation moat made operative — your foundational rules iterate from your own data, not from a template.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -143,11 +186,8 @@ import FinalCTA from '../components/FinalCTA.astro';
       <h2>The <strong>Debrief Engine.</strong></h2>
       <div class="split">
         <div class="split-text">
-          <p>Every Sunday evening, the Debrief Engine synthesises your week. Not a mood summary. A performance review — the kind a serious athlete would review between training sessions.</p>
-          <p>The debrief covers what changed, what degraded, what improved, what your decision quality looked like, and which Operating Principle was tested during the week. It closes with your primary objective for the next cycle — a single actionable focus that carries forward automatically to Monday's brief.</p>
-          <p>The arc continues beyond the week. On the last day of every calendar quarter, <strong>THE SIGNAL</strong> fires — a 280–400 word digest of what crystallised, what is drifting, and what the next quarter demands. After reading THE SIGNAL, you know whether the trajectory of the last 90 days is the trajectory you intended. At Day 365, the <strong>Annual Review</strong> closes the year-long arc with a five-section verdict on the operator you have become.</p>
-          <p>The DEBRIEF tab is searchable. Every brief — weekly, milestone, quarterly, annual — has clickable section anchors and a master/detail reader on desktop. Search across the full archive with hit highlighting. By Week 12 your debriefs are an intelligence record on yourself. The reader is built to treat them that way.</p>
-          <p>Your <strong>Performance Ledger</strong> is exportable as a credentialed, dated, call-sign-stamped record. A founder going into a Series A. An executive going into a board review. A consultant pitching a new engagement. <em>"Here is my decision record for the last 18 months — what I was right about, what I was wrong about, what the pattern shows."</em> No other product produces this.</p>
+          <p class="lead">Every Sunday evening, a performance review on your week — not a mood summary. The arc continues quarterly (THE SIGNAL) and annually (Day 365 review). Searchable archive becomes your intelligence record on yourself.</p>
+          <p>Plus an exportable <strong>Performance Ledger</strong> — credentialed, dated, call-sign-stamped. The kind of record you walk into a Series A, a board review, or a new engagement holding.</p>
         </div>
         <div class="mock-card">
           <div class="mock-label">WEEKLY DEBRIEF — WEEK 7</div>
@@ -158,6 +198,35 @@ import FinalCTA from '../components/FinalCTA.astro';
           </div></div>
           <div class="mock-row gold"><div class="mock-lane">PRINCIPLE TESTED THIS WEEK</div><div class="mock-body">OP 2: No hire decision without 72-hour cooling period. Two opportunities arose. Protocol held on one. The second was borderline — flagged for review.</div></div>
           <div class="mock-synthesis"><div class="mock-lane">◈ NEXT CYCLE OBJECTIVE</div><div class="mock-body">Reduce reactive decisions after 3pm — implement end-of-day decision cutoff protocol before Week 8.</div></div>
+        </div>
+      </div>
+
+      <div class="deep-dive">
+        <div class="eyebrow" style="margin-bottom:18px">DEEP DIVE — THE DEBRIEF ENGINE IN FULL</div>
+        <div class="deep-grid">
+          <div class="deep-block">
+            <h4>The weekly debrief</h4>
+            <p>Sunday evening. Not a mood summary. A performance review — the kind a serious athlete would review between training sessions.</p>
+            <p>Covers what changed, what degraded, what improved, what your decision quality looked like, and which Operating Principle was tested during the week. Closes with your primary objective for the next cycle — a single actionable focus that carries forward automatically to Monday's brief.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>THE SIGNAL · quarterly</h4>
+            <p>On the last day of every calendar quarter (Mar / Jun / Sep / Dec), THE SIGNAL fires — a 280–400 word digest of what crystallised, what is drifting, and what the next quarter demands.</p>
+            <p>After reading THE SIGNAL you know whether the trajectory of the last 90 days is the trajectory you intended. The 90-day reflection most operators promise themselves and never do — written from your record, not a template.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>Day 365 Annual Review</h4>
+            <p>At checkin_count === 365, a five-section verdict closes the year-long arc: the operator you were on Day 1, the operator you are now, what the record proves, what it warns, and the next year's call.</p>
+            <p>The longest-arc artefact in the product. Most performance/AI tools never accumulate enough history to write a meaningful annual; SENTINEL does because the daily check-in is the ground-truth substrate.</p>
+          </div>
+
+          <div class="deep-block">
+            <h4>The reader + Performance Ledger</h4>
+            <p>The DEBRIEF tab is searchable. Every brief — weekly, milestone, quarterly, annual — has clickable section anchors and a master/detail reader on desktop. Search across the full archive with hit highlighting. By Week 12 your debriefs are an intelligence record on yourself.</p>
+            <p>The <strong>Performance Ledger</strong> is exportable as a credentialed, dated, call-sign-stamped record. A founder going into a Series A. An executive going into a board review. A consultant pitching a new engagement. <em>"Here is my decision record — what I was right about, what I was wrong about, what the pattern shows."</em> No other product produces this.</p>
+          </div>
         </div>
       </div>
     </section>

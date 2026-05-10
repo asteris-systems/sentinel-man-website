@@ -3,26 +3,53 @@ const engines = [
   {
     n: '01',
     title: 'BRIEF ENGINE',
-    body: 'Your daily operational command brief. Readiness score, mode assignment, decision window, and three performance levers — delivered before you open your first email.',
+    summary: 'Daily command brief — readiness, mode, decision window, three levers. Before your inbox.',
     color: '#FFDC00',
   },
   {
     n: '02',
     title: 'DECISION ENGINE',
-    body: 'Three modes. COUNCIL: five AI lanes (Reasoner, Contrarian, Context Enhancer, Predictor, Pre-mortem) synthesised into one assessment in 26 seconds. FAST: sub-5-second risk flag for live negotiations. REPLAY: submit a past decision, watch the council retroactively assess what you missed. The Contrarian runs on a different model architecture with no access to your principles. Cohort priors from 1,600 simulated decisions seed the council from Day 1. Multi-OP conflicts surfaced as a meta-governance question — never resolved for you. Alliance Risk forecast when the call involves a contact in your network. Black-swan tail risks named on every assessment. Calibration disclosure on every output. The council is not your echo chamber.',
+    summary: 'Three modes — full COUNCIL, sub-5s FAST, retroactive REPLAY. Five lanes per assessment, not one AI guessing.',
     color: '#0074D9',
   },
   {
     n: '03',
     title: 'PATTERN ENGINE',
-    body: 'Builds a model of your operational patterns over time. Only surfaces a pattern when the data supports it. Your readiness baseline becomes personal, not generic. Cohort percentile benchmarks your decision-quality and readiness against the synthetic operator cohort matched to your archetype. Network Activation surfaces overdue contacts as 1–3 ready-to-send outreach drafts weighted by leverage to your weekly objective. Dynamic Principle Refactoring proposes ≤3 principle changes per cycle from your lived data — accept what fits, reject what doesn’t.',
+    summary: 'Your personal model — patterns, cohort percentile, network activation drafts, principle refactoring proposals.',
     color: '#34D399',
   },
   {
     n: '04',
     title: 'DEBRIEF ENGINE',
-    body: 'Weekly synthesis of decision quality, principle adherence, network health, and momentum. Sunday evening. Next week’s objective written to your Monday brief automatically. Quarterly SIGNAL closes the 90-day arc; Day 365 Annual Review names the operator you’ve become. The full debrief archive is searchable with hit-highlighting and clickable section anchors.',
+    summary: 'Weekly debrief, quarterly SIGNAL, Day 365 annual review. Searchable archive of your record.',
     color: '#F1F5F9',
+  },
+];
+
+const deepDives = [
+  {
+    n: '01',
+    title: 'BRIEF ENGINE',
+    color: '#FFDC00',
+    body: `Your daily operational command brief. Readiness score, mode assignment (COMMAND / RECON / STANDBY / ASSAULT / FORTIFY / CRITICAL), decision-quality window, three operational levers — derived from your check-in data and recent patterns. Above the brief sits your weekly objective; below it, your day's primary objective. Delivered before you open your first email.`,
+  },
+  {
+    n: '02',
+    title: 'DECISION ENGINE',
+    color: '#0074D9',
+    body: `Three modes. <strong>COUNCIL</strong> — five AI lanes (Reasoner, Contrarian, Context Enhancer, Predictor, Pre-mortem) synthesised into one assessment in 26 seconds. <strong>FAST</strong> — sub-5-second risk flag for live negotiations. <strong>REPLAY</strong> — submit a past decision, watch the council retroactively assess what you missed. The Contrarian runs on a different model architecture with no access to your principles. Cohort priors from 1,600 simulated decisions seed the council from Day 1. Multi-OP conflicts surfaced as a meta-governance question — never resolved for you. Alliance Risk forecast when the call involves a contact in your network. Black-swan tail risks named on every assessment. Calibration disclosure on every output. The council is not your echo chamber.`,
+  },
+  {
+    n: '03',
+    title: 'PATTERN ENGINE',
+    color: '#34D399',
+    body: `Builds a model of your operational patterns over time. Only surfaces a pattern when the data supports it. Your readiness baseline becomes personal, not generic. <strong>Cohort percentile</strong> benchmarks your decision-quality and readiness against the synthetic operator cohort matched to your archetype. <strong>Network Activation</strong> surfaces overdue contacts as 1–3 ready-to-send outreach drafts weighted by leverage to your weekly objective. <strong>Dynamic Principle Refactoring</strong> proposes ≤3 principle changes per cycle from your lived data — accept what fits, reject what doesn't.`,
+  },
+  {
+    n: '04',
+    title: 'DEBRIEF ENGINE',
+    color: '#F1F5F9',
+    body: `Weekly synthesis of decision quality, principle adherence, network health, and momentum. Sunday evening. Next week's objective written to your Monday brief automatically. Quarterly SIGNAL closes the 90-day arc; Day 365 Annual Review names the operator you've become. The full debrief archive is searchable with hit-highlighting and clickable section anchors.`,
   },
 ];
 ---
@@ -37,12 +64,27 @@ const engines = [
       <div class="engine" style={`--accent:${e.color}`}>
         <div class="engine-num">{e.n}</div>
         <div class="engine-title">{e.title}</div>
-        <div class="engine-body">{e.body}</div>
+        <div class="engine-body">{e.summary}</div>
       </div>
     ))}
   </div>
   <div class="trust-strip">
     <div class="trust-eyebrow">THE ANTI-CHATGPT TRUST SIGNAL</div>
     <div class="trust-body">Every assessment ships with a <strong>calibration disclosure</strong> — the exact inputs the council was reasoning from. Operator record counts. Cohort archetype matched. Lanes that ran. Data thin? You see it. Data deep? You see that too. Most AI gives you confident output and asks you to trust it. SENTINEL shows you when to push back.</div>
+  </div>
+
+  <div class="engines-deep">
+    <div class="eyebrow" style="margin-bottom:24px">DEEP DIVE — WHAT EACH ENGINE ACTUALLY DOES</div>
+    <div class="engines-deep-grid">
+      {deepDives.map((e) => (
+        <div class="engine-deep" style={`--accent:${e.color}`}>
+          <div class="engine-deep-head">
+            <span class="engine-deep-num">{e.n}</span>
+            <span class="engine-deep-title">{e.title}</span>
+          </div>
+          <p class="engine-deep-body" set:html={e.body} />
+        </div>
+      ))}
+    </div>
   </div>
 </section>
