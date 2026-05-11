@@ -338,13 +338,13 @@ nav.site-nav {
 }
 .trust-eyebrow {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.18em;
   color: var(--gold);
   margin-bottom: 10px;
 }
 .trust-body {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--text);
   line-height: 1.6;
 }
