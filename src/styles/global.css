@@ -80,10 +80,10 @@ nav.site-nav {
   grid-template-columns: 1fr 560px;
   max-width: 1440px;
   margin: 0 auto;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 290px);
 }
 .hero-left {
-  padding: 56px 56px 56px 72px;
+  padding: 32px 48px 32px 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,7 +193,7 @@ nav.site-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 48px;
+  padding: 28px 40px;
   overflow: hidden;
 }
 .phone-frame {
@@ -234,7 +234,7 @@ nav.site-nav {
 /* POSITIONING STRIP */
 .strip {
   border-top: 1px solid var(--border);
-  padding: 36px 56px;
+  padding: 24px 56px;
   display: flex;
   align-items: center;
   gap: 28px;
