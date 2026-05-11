@@ -488,20 +488,20 @@ nav.site-nav {
 }
 .tl-day {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.16em;
   color: var(--gold);
   margin-bottom: 8px;
 }
 .tl-title {
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text);
   font-weight: 500;
   margin-bottom: 8px;
 }
 .tl-body {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--body);
   line-height: 1.5;
   padding: 0 8px;
